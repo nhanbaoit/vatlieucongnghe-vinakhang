@@ -109,19 +109,24 @@
    HEADER CHÍNH (2 TẦNG: HÀNG CHÍNH + HÀNG MENU & TÌM KIẾM)
    ========================================================================== */
 
-.site-header {
+.site-header-wrapper {
   position: sticky;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #FFFFFF;
-  box-shadow: 0 4px 16px rgba(42, 25, 5, 0.06);
   z-index: var(--z-header);
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 20px rgba(42, 25, 5, 0.08);
+}
+
+.site-header {
+  width: 100%;
+  background-color: #FFFFFF;
   transition: all var(--transition-normal);
 }
 
 .site-header.scrolled {
-  box-shadow: 0 6px 20px rgba(42, 25, 5, 0.1);
+  box-shadow: 0 4px 16px rgba(42, 25, 5, 0.08);
 }
 
 /* HÀNG TRÊN: Logo + Tên công ty + Slogan | Hotline tư vấn */
