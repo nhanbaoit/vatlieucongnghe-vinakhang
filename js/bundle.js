@@ -17,8 +17,18 @@ function initNavigation() {
   const mobileLinks = document.querySelectorAll('.mobile-nav-link');
   const desktopLinks = document.querySelectorAll('.nav-link');
 
-  // 1. Quản lý Header Sticky khi cuộn trang
-  let lastScrollY = window.scrollY;
+  // 1. Quản lý Thanh Menu Điều Hướng Cố Định Sticky khi cuộn trang
+  const navSticky = document.querySelector('.header-nav-row');
+  let navTop = 0;
+  
+  const updateNavTop = () => {
+    if (navSticky && !navSticky.classList.contains('is-sticky')) {
+      navTop = navSticky.getBoundingClientRect().top + window.scrollY;
+    }
+  };
+  updateNavTop();
+  window.addEventListener('resize', updateNavTop, { passive: true });
+
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
     if (header) {
@@ -28,7 +38,15 @@ function initNavigation() {
         header.classList.remove('scrolled');
       }
     }
-    lastScrollY = currentScrollY;
+
+    if (navSticky) {
+      if (!navTop) updateNavTop();
+      if (currentScrollY >= navTop && navTop > 0) {
+        navSticky.classList.add('is-sticky');
+      } else {
+        navSticky.classList.remove('is-sticky');
+      }
+    }
   };
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();

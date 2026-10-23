@@ -308,15 +308,27 @@
 
 /* HÀNG DƯỚI: Menu điều hướng + Thanh tìm kiếm (Cố định Sticky khi cuộn trang) */
 .header-nav-row {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: var(--z-header);
+  z-index: 9999;
   background: linear-gradient(180deg, #FFFFFF 0%, #FAF8F5 100%);
   border-top: 1px solid #F1F5F9;
   border-bottom: 2px solid rgba(180, 122, 30, 0.35);
   box-shadow: 0 4px 16px rgba(42, 25, 5, 0.08);
+  transition: all var(--transition-fast);
+}
+
+.header-nav-row.is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  box-shadow: 0 6px 20px rgba(42, 25, 5, 0.12);
+  background: #FFFFFF;
 }
 
 .header-nav-inner {

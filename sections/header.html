@@ -86,42 +86,42 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Hàng dưới: Menu điều hướng + Thanh tìm kiếm -->
-    <div class="header-nav-row">
-      <div class="container header-nav-inner">
-        <!-- Menu Chính 7 Nhánh Chuẩn Sitemap -->
-        <nav class="main-nav" aria-label="Menu chính">
-          <ul class="nav-list">
-            <li><a href="#" class="nav-link active">Trang Chủ</a></li>
-            <li><a href="#about" class="nav-link">Giới Thiệu</a></li>
-            <li><a href="#products" class="nav-link">Sản Phẩm</a></li>
-            <li><a href="#news" class="nav-link">Tin Tức</a></li>
-            <li><a href="#contact" class="nav-link">Liên Hệ</a></li>
-          </ul>
-        </nav>
+  <!-- Thanh Menu Điều Hướng Cố Định Sticky Khi Cuộn Trang -->
+  <div class="header-nav-row" id="header-nav-sticky">
+    <div class="container header-nav-inner">
+      <!-- Menu Chính Chuẩn Sitemap -->
+      <nav class="main-nav" aria-label="Menu chính">
+        <ul class="nav-list">
+          <li><a href="#" class="nav-link active">Trang Chủ</a></li>
+          <li><a href="#about" class="nav-link">Giới Thiệu</a></li>
+          <li><a href="#products" class="nav-link">Sản Phẩm</a></li>
+          <li><a href="#news" class="nav-link">Tin Tức</a></li>
+          <li><a href="#contact" class="nav-link">Liên Hệ</a></li>
+        </ul>
+      </nav>
 
-        <!-- Thanh Tìm Kiếm Sản Phẩm (Search Bar) -->
-        <div class="header-search-wrap">
-          <form class="header-search-form" id="header-search-form" role="search" onsubmit="event.preventDefault();">
-            <input 
-              type="search" 
-              id="header-search-input" 
-              class="header-search-input" 
-              placeholder="Tìm kiếm sản phẩm, băng keo, vải chịu nhiệt..." 
-              autocomplete="off"
-              aria-label="Tìm kiếm sản phẩm"
-            />
-            <button type="submit" id="header-search-btn" class="header-search-btn" aria-label="Bấm tìm kiếm">
-              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-              </svg>
-            </button>
-          </form>
+      <!-- Thanh Tìm Kiếm Sản Phẩm (Search Bar) -->
+      <div class="header-search-wrap">
+        <form class="header-search-form" id="header-search-form" role="search" onsubmit="event.preventDefault();">
+          <input 
+            type="search" 
+            id="header-search-input" 
+            class="header-search-input" 
+            placeholder="Tìm kiếm sản phẩm, băng keo, vải chịu nhiệt..." 
+            autocomplete="off"
+            aria-label="Tìm kiếm sản phẩm"
+          />
+          <button type="submit" id="header-search-btn" class="header-search-btn" aria-label="Bấm tìm kiếm">
+            <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </button>
+        </form>
 
-          <!-- Dropdown Gợi Ý Tìm Kiếm Nhanh -->
-          <div id="search-results-dropdown" class="search-results-dropdown" style="display: none;" aria-live="polite"></div>
-        </div>
+        <!-- Dropdown Gợi Ý Tìm Kiếm Nhanh -->
+        <div id="search-results-dropdown" class="search-results-dropdown" style="display: none;" aria-live="polite"></div>
       </div>
     </div>
   </div>
