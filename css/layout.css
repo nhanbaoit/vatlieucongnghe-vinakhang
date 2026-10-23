@@ -110,23 +110,16 @@
    ========================================================================== */
 
 .site-header-wrapper {
-  position: sticky;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   z-index: var(--z-header);
   background-color: #FFFFFF;
-  box-shadow: 0 4px 20px rgba(42, 25, 5, 0.08);
 }
 
 .site-header {
+  position: relative;
   width: 100%;
   background-color: #FFFFFF;
-  transition: all var(--transition-normal);
-}
-
-.site-header.scrolled {
-  box-shadow: 0 4px 16px rgba(42, 25, 5, 0.08);
 }
 
 /* HÀNG TRÊN: Logo + Tên công ty + Slogan | Hotline tư vấn */
