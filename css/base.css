@@ -16,7 +16,7 @@ html {
 }
 
 section[id] {
-  scroll-margin-top: 30px;
+  scroll-margin-top: 65px;
 }
 
 @media (prefers-reduced-motion: reduce) {
