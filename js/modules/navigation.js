@@ -121,14 +121,98 @@ export function initNavigation() {
     sections.forEach((sec) => sectionObserver.observe(sec));
   }
 
-  // 4. Chuyển đổi ngôn ngữ VN / EN (Visual Feedback)
-  const langButtons = document.querySelectorAll('.lang-btn');
-  langButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      langButtons.forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
-      const lang = btn.textContent.trim();
-      console.info(`[VinaKhang] Ngôn ngữ hiển thị đã đổi sang: ${lang}`);
+  // 4. Thanh tìm kiếm sản phẩm thông minh (Header Search Bar)
+  const searchForm = document.getElementById('header-search-form');
+  const searchInput = document.getElementById('header-search-input');
+  const searchDropdown = document.getElementById('search-results-dropdown');
+
+  if (searchInput && searchDropdown) {
+    const performSearch = (keyword) => {
+      const q = keyword.trim().toLowerCase();
+      if (!q) {
+        searchDropdown.style.display = 'none';
+        searchDropdown.innerHTML = '';
+        return;
+      }
+
+      const products = window.PRODUCTS_DATA || [];
+      const matches = products.filter((item) => {
+        const title = (item.title || '').toLowerCase();
+        const subtitle = (item.subtitle || '').toLowerCase();
+        const definition = (item.definition || '').toLowerCase();
+        const app = (item.application || '').toLowerCase();
+        return title.includes(q) || subtitle.includes(q) || definition.includes(q) || app.includes(q);
+      });
+
+      if (matches.length === 0) {
+        searchDropdown.innerHTML = `
+          <div class="search-empty-msg">
+            Không tìm thấy sản phẩm phù hợp với từ khóa "<strong>${keyword}</strong>"
+          </div>
+        `;
+      } else {
+        searchDropdown.innerHTML = matches.slice(0, 5).map((item) => `
+          <div class="search-result-item" data-id="${item.id}" role="button" tabindex="0">
+            <img src="${item.image || './img/logo-mark.png'}" alt="${item.title}" class="search-result-img" />
+            <div class="search-result-info">
+              <div class="search-result-title">${item.title} - ${item.subtitle || ''}</div>
+              <div class="search-result-meta">
+                <span>${item.code}</span> • <span>${item.origin}</span>
+              </div>
+            </div>
+          </div>
+        `).join('');
+
+        // Bấm vào kết quả tìm kiếm để mở Modal chi tiết
+        searchDropdown.querySelectorAll('.search-result-item').forEach((resItem) => {
+          resItem.addEventListener('click', () => {
+            const id = resItem.getAttribute('data-id');
+            if (window.openProductModal) {
+              window.openProductModal(id);
+            }
+            searchDropdown.style.display = 'none';
+          });
+        });
+      }
+
+      searchDropdown.style.display = 'block';
+    };
+
+    searchInput.addEventListener('input', (e) => {
+      performSearch(e.target.value);
     });
-  });
+
+    searchInput.addEventListener('focus', (e) => {
+      if (e.target.value.trim()) {
+        performSearch(e.target.value);
+      }
+    });
+
+    if (searchForm) {
+      searchForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const val = searchInput.value.trim();
+        if (val) {
+          searchDropdown.style.display = 'none';
+          const productsSection = document.getElementById('products');
+          if (productsSection) {
+            productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    }
+
+    // Đóng dropdown khi click bên ngoài hoặc bấm phím ESC
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.header-search-wrap')) {
+        searchDropdown.style.display = 'none';
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        searchDropdown.style.display = 'none';
+      }
+    });
+  }
 }

@@ -474,6 +474,7 @@ export function openProductModal(productId) {
 
 // Expose globally
 if (typeof window !== 'undefined') {
+  window.PRODUCTS_DATA = PRODUCTS_DATA;
   window.openProductModal = openProductModal;
   window.closeProductModal = closeProductModal;
 }
@@ -494,7 +495,7 @@ export function initProductFilter() {
 
   if (!tabList || !productGrid) return;
 
-  const INITIAL_LIMIT = 6;
+  const INITIAL_LIMIT = 8;
   let currentFilter = 'all';
   let isExpanded = false;
 
@@ -552,7 +553,7 @@ export function initProductFilter() {
     }, 150);
   };
 
-  // Khởi tạo ban đầu: 6 sản phẩm đầu tiên
+  // Khởi tạo ban đầu: 8 sản phẩm đầu tiên (2 hàng x 4 sản phẩm)
   renderList('all');
 
   // Lắng nghe sự kiện chuyển đổi Tabs

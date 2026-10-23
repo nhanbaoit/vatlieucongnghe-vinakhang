@@ -166,18 +166,24 @@
 .product-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-24);
+  gap: var(--space-20);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 576px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 840px) {
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -191,7 +197,7 @@
   flex-direction: column;
   transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
   position: relative;
-  padding: 16px;
+  padding: 14px 14px 16px;
 }
 
 .product-card:hover {
@@ -205,7 +211,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  gap: 6px;
+  flex-wrap: wrap;
 }
 
 .product-code-num {
@@ -218,27 +226,30 @@
 .product-badge-group {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
+  flex-wrap: wrap;
 }
 
 .badge-premium {
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 700;
   background-color: #2563EB;
   color: #FFFFFF;
-  padding: 2px 10px;
+  padding: 2px 8px;
   border-radius: 9999px;
   letter-spacing: 0.3px;
+  white-space: nowrap;
 }
 
 .badge-origin-pill {
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 500;
   background-color: #F8FAFC;
   color: #64748B;
   border: 1px solid #E2E8F0;
-  padding: 2px 10px;
+  padding: 2px 8px;
   border-radius: 9999px;
+  white-space: nowrap;
 }
 
 /* Card Media (Real photo or Placeholder) */
@@ -317,15 +328,15 @@
 }
 
 .product-title-group {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .product-main-title {
-  font-size: 17px;
+  font-size: 15.5px;
   font-weight: 700;
   color: #0F172A;
   line-height: 1.35;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 }
 
 .product-main-title a {
@@ -339,9 +350,10 @@
 }
 
 .product-sub-title {
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 500;
   color: #64748B;
+  line-height: 1.3;
 }
 
 /* Specs List with Orange Dots */
@@ -349,26 +361,27 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   flex-grow: 1;
 }
 
 .product-spec-bullet {
-  font-size: 12.5px;
+  font-size: 12px;
   color: #475569;
   display: flex;
   align-items: flex-start;
-  gap: 8px;
-  line-height: 1.45;
+  gap: 6px;
+  line-height: 1.4;
+  word-break: break-word;
 }
 
 .orange-dot {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background-color: #F97316;
   flex-shrink: 0;
-  margin-top: 6px;
+  margin-top: 5px;
 }
 
 /* Card Footer */
@@ -377,12 +390,13 @@
   align-items: center;
   justify-content: space-between;
   border-top: 1px dashed #E2E8F0;
-  padding-top: 12px;
+  padding-top: 10px;
   margin-top: auto;
+  gap: 6px;
 }
 
 .product-more-link {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   color: #0284C7;
   cursor: pointer;
@@ -390,6 +404,7 @@
   border: none;
   padding: 0;
   transition: color var(--transition-fast);
+  text-align: left;
 }
 
 .product-more-link:hover {

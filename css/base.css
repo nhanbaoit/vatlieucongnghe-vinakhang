@@ -15,6 +15,10 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+section[id] {
+  scroll-margin-top: 130px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
