@@ -13,19 +13,26 @@ export function initNavigation() {
   const desktopLinks = document.querySelectorAll('.nav-link');
 
   // 1. Quản lý Thanh Menu Điều Hướng Cố Định Sticky khi cuộn trang
-  const navSticky = document.querySelector('.header-nav-row');
-  let navTop = 0;
+  const navSticky = document.getElementById('header-nav-sticky') || document.querySelector('.header-nav-row');
+  const navPlaceholder = document.getElementById('header-nav-placeholder');
+  const headerWrapper = document.querySelector('.site-header-wrapper');
   
-  const updateNavTop = () => {
-    if (navSticky && !navSticky.classList.contains('is-sticky')) {
-      navTop = navSticky.getBoundingClientRect().top + window.scrollY;
+  let navTriggerPoint = 130;
+  const calculateTriggerPoint = () => {
+    if (headerWrapper) {
+      navTriggerPoint = headerWrapper.offsetTop + headerWrapper.offsetHeight;
+    } else if (navSticky && !navSticky.classList.contains('is-sticky')) {
+      navTriggerPoint = navSticky.offsetTop;
     }
   };
-  updateNavTop();
-  window.addEventListener('resize', updateNavTop, { passive: true });
+
+  calculateTriggerPoint();
+  window.addEventListener('resize', calculateTriggerPoint, { passive: true });
+  window.addEventListener('load', calculateTriggerPoint, { passive: true });
 
   const handleScroll = () => {
-    const currentScrollY = window.scrollY;
+    const currentScrollY = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+    
     if (header) {
       if (currentScrollY > 40) {
         header.classList.add('scrolled');
@@ -35,16 +42,32 @@ export function initNavigation() {
     }
 
     if (navSticky) {
-      if (!navTop) updateNavTop();
-      if (currentScrollY >= navTop && navTop > 0) {
-        navSticky.classList.add('is-sticky');
+      if (!navTriggerPoint || navTriggerPoint <= 0) {
+        calculateTriggerPoint();
+      }
+      
+      if (currentScrollY >= navTriggerPoint) {
+        if (!navSticky.classList.contains('is-sticky')) {
+          if (navPlaceholder) {
+            navPlaceholder.style.display = 'block';
+            navPlaceholder.style.height = navSticky.offsetHeight + 'px';
+          }
+          navSticky.classList.add('is-sticky');
+        }
       } else {
-        navSticky.classList.remove('is-sticky');
+        if (navSticky.classList.contains('is-sticky')) {
+          navSticky.classList.remove('is-sticky');
+          if (navPlaceholder) {
+            navPlaceholder.style.display = 'none';
+          }
+        }
       }
     }
   };
   window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll();
+  // Gọi ngay lần đầu phòng trường hợp trang được F5 ở vị trí giữa trang
+  setTimeout(handleScroll, 50);
+  setTimeout(handleScroll, 200);
 
   // 2. Mở / Đóng Drawer Mobile
   const openDrawer = () => {
