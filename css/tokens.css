@@ -1,0 +1,133 @@
+:root {
+  /* ==========================================================================
+     DESIGN TOKENS - BẢNG MÀU PHONG THỦY MỆNH KIM & NAME CARD VINA KHANG
+     Bản mệnh Kim: Trắng, Xám, Xám ghi, Bạc, Ánh kim
+     Tương sinh Thổ sinh Kim: Vàng kem, Vàng nhạt, Màu be, Nâu đậm
+     ========================================================================== */
+
+  /* 1. Nhóm Trắng, Bạc & Xám Ghi (Mệnh Kim - Chủ Đạo) */
+  --color-metal-white: #FFFFFF;              /* Trắng tinh khiết */
+  --color-metal-silver-light: #F8FAFC;       /* Bạc sáng tinh tế */
+  --color-metal-silver: #F0F3F7;             /* Ánh bạc kim loại */
+  --color-metal-silver-border: #D8DFE8;      /* Viền xám bạc chuẩn */
+  --color-metal-gray-light: #E2E8F0;         /* Xám ghi nhạt */
+  --color-metal-gray: #64748B;               /* Xám ghi trung tính */
+  --color-metal-gray-dark: #334155;          /* Xám ghi đậm */
+  --color-metal-steel: #1E293B;              /* Thép nguội kim loại */
+
+  /* 2. Nhóm Vàng Kem, Vàng Nhạt & Màu Be (Thổ sinh Kim - Nền phụ nhã nhặn) */
+  --color-tone-cream: #FFFDF9;               /* Trắng kem tinh khôi */
+  --color-tone-beige-light: #FAF8F5;         /* Be sáng thanh lịch */
+  --color-tone-beige: #F4EFE6;               /* Màu be trung tính */
+  --color-tone-gold-light: #F7E7CE;          /* Vàng nhạt mượt mà */
+  --color-tone-gold-champagne: #EAD8B7;      /* Vàng ánh kim Champagne */
+
+  /* 3. Nhóm Nâu Đậm & Vàng Nâu Hổ Phách (Logo Chữ K & Name Card Cao Cấp) */
+  --color-primary-gold: #B47A1E;             /* Vàng nâu hổ phách chữ K */
+  --color-primary-gold-hover: #9E6814;       /* Vàng nâu đậm khi hover */
+  --color-primary-gold-shimmer: #DFAC55;     /* Ánh kim lấp lánh */
+  --color-rich-brown: #6C4410;               /* Nâu hổ phách trầm */
+  --color-rich-brown-dark: #3F2608;          /* Nâu đậm hoàng kim */
+  --color-rich-brown-deep: #2A1905;          /* Nâu đen name card sang trọng */
+
+  /* 4. Nhóm Xanh Tím Navy & Cyan Điểm Xuyết (Chuẩn Nhận Diện Logo) */
+  --color-logo-navy: #1B1B6D;                /* Xanh tím chữ Vina Khang */
+  --color-logo-cyan: #00A3A6;                /* Cyan viền mái nhà */
+  --color-logo-cyan-light: #E6F8F8;
+
+  /* 5. Màu Nền (Surfaces & Backgrounds) */
+  --color-surface-white: #FFFFFF;
+  --color-surface-beige: #FAF8F5;            /* Nền be nhạt dịu mắt */
+  --color-surface-silver: #F1F4F8;           /* Nền xám bạc kim loại */
+  --color-surface-dark: #2A1905;             /* Nền nâu đậm cho Footer & Topbar */
+  --color-surface-card: #FFFFFF;
+  --color-surface-glass: rgba(255, 255, 255, 0.92);
+
+  /* 6. Màu Văn Bản (WCAG 2.2 AA Contrast >= 4.5:1) */
+  --color-text-main: #1E242B;                /* Đen than ánh xám thép */
+  --color-text-title: #2A1905;               /* Nâu đậm quý phái cho Headings */
+  --color-text-muted: #59616D;               /* Xám ghi sâu dễ đọc */
+  --color-text-light: #7E8794;               /* Xám bạc nhạt */
+  --color-text-inverse: #FFFFFF;             /* Trắng trên nền đậm */
+  --color-text-gold: #8C5C10;                /* Vàng nâu tương phản chuẩn */
+
+  /* 7. Đường Viền (Borders & Dividers) */
+  --color-border: #E2E8F0;                   /* Viền xám bạc */
+  --color-border-subtle: #F1F4F8;
+  --color-border-hover: #B47A1E;            /* Viền vàng nâu khi hover */
+  --color-border-gold: #D6B276;              /* Viền chỉ vàng ánh kim */
+
+  /* 8. Trạng Thái Hệ Thống */
+  --color-success: #15803D;
+  --color-error: #B91C1C;
+  --color-warning: #B45309;
+  --color-info: #0369A1;
+
+  /* ==========================================================================
+     TYPOGRAPHY TOKENS
+     ========================================================================== */
+  --font-family-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --font-size-xs: 0.875rem;    /* 14px */
+  --font-size-sm: 1rem;        /* 16px (base body) */
+  --font-size-md: 1.0625rem;   /* 17px */
+  --font-size-lg: 1.125rem;    /* 18px */
+  --font-size-xl: 1.25rem;     /* 20px */
+  --font-size-2xl: 1.5625rem;  /* 25px */
+  --font-size-3xl: 2rem;       /* 32px */
+  --font-size-hero: 2.625rem;  /* 42px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.6;
+  --line-height-loose: 1.8;
+
+  /* Spacing */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+
+  --container-max-width: 1240px;
+  --header-height-desktop: 86px;
+  --topbar-height-desktop: 42px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows (Hiệu ứng đổ bóng ánh kim mờ) */
+  --shadow-sm: 0 1px 3px rgba(30, 41, 59, 0.05), 0 1px 2px rgba(30, 41, 59, 0.03);
+  --shadow-card: 0 4px 14px rgba(42, 25, 5, 0.06);
+  --shadow-hover: 0 12px 30px rgba(180, 122, 30, 0.16);
+  --shadow-dropdown: 0 14px 36px rgba(42, 25, 5, 0.18);
+  --shadow-focus: 0 0 0 3px rgba(180, 122, 30, 0.35);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  --z-sticky: 100;
+  --z-header: 1000;
+  --z-modal: 2000;
+  --z-toast: 3000;
+}

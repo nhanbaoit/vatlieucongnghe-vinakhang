@@ -1,0 +1,19 @@
+/* ==========================================================================
+   MAIN CSS ENTRY POINT - CÔNG TY TNHH THƯƠNG MẠI VINA KHANG
+   Tích hợp kiến trúc Modular CSS theo chuẩn Design System
+   ========================================================================== */
+
+/* 1. Design Tokens (Biến màu, Typography, Spacing, Radius, Shadow) */
+@import url('./tokens.css');
+
+/* 2. Base & Reset (Reset CSS, Accessibility WCAG 2.2 AA, Typography nền) */
+@import url('./base.css');
+
+/* 3. Layout (Topbar, Header, Navbar, Footer, Container, Grid) */
+@import url('./layout.css');
+
+/* 4. UI Components (Buttons, Product Cards, Tab Buttons, Inputs, Badges, Toast) */
+@import url('./components.css');
+
+/* 5. Page Sections (Hero Slider, About, Products Filter, CTA Banner, News) */
+@import url('./sections.css');

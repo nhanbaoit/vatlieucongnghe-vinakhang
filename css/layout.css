@@ -1,0 +1,720 @@
+/* ==========================================================================
+   LAYOUT SYSTEM - THEO TONE MỆNH KIM & NAME CARD VINA KHANG
+   ========================================================================== */
+
+/* Container tiêu chuẩn có lề co giãn */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-20);
+  padding-right: var(--space-20);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: var(--space-32);
+    padding-right: var(--space-32);
+  }
+}
+
+/* ==========================================================================
+   TOP BAR (TÔNG NÂU ĐẬM HOÀNG KIM & CHỈ VIỀN ÁNH KIM NHƯ NAME CARD)
+   ========================================================================== */
+
+.top-bar {
+  background: linear-gradient(90deg, #2A1905 0%, #3F2608 50%, #2A1905 100%);
+  color: #E2E8F0;
+  font-size: var(--font-size-xs);
+  border-bottom: 1px solid rgba(214, 178, 118, 0.35); /* Viền chỉ ánh kim */
+  padding: 8px 0;
+  position: relative;
+  z-index: calc(var(--z-header) + 1);
+}
+
+.top-bar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+}
+
+.top-bar-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-20);
+}
+
+.top-bar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  color: #F1F4F8; /* Bạc sáng */
+  transition: color var(--transition-fast);
+}
+
+.top-bar-item svg {
+  width: 15px;
+  height: 15px;
+  color: var(--color-primary-gold-shimmer);
+  flex-shrink: 0;
+}
+
+.top-bar-item:hover {
+  color: var(--color-primary-gold-shimmer);
+}
+
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  background: rgba(255, 255, 255, 0.12);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(214, 178, 118, 0.3);
+}
+
+.lang-btn {
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  color: #CBD5E1;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.lang-btn.active {
+  background: linear-gradient(135deg, var(--color-primary-gold) 0%, var(--color-rich-brown) 100%);
+  color: #FFFFFF;
+  font-weight: var(--font-weight-bold);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   HEADER CHÍNH & MAIN NAVIGATION (TRẮNG TINH KHÔI & VIỀN BẠC KIM LOẠI)
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-metal-silver-border);
+  box-shadow: 0 2px 10px rgba(42, 25, 5, 0.04);
+  z-index: var(--z-header);
+  transition: all var(--transition-normal);
+}
+
+.site-header.scrolled {
+  box-shadow: var(--shadow-card);
+  background-color: #FFFFFF;
+  border-bottom-color: var(--color-primary-gold);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height-desktop);
+  gap: var(--space-20);
+}
+
+/* Brand Logo */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-logo-img {
+  display: block;
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.brand-logo:hover .brand-logo-img {
+  transform: scale(1.04);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-logo-navy);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.brand-slogan {
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-rich-brown);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Main Nav Desktop */
+.main-nav {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .main-nav {
+    display: block;
+  }
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.nav-link {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-main);
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 14px;
+  right: 14px;
+  height: 2px;
+  background-color: var(--color-primary-gold);
+  transform: scaleX(0);
+  transition: transform var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-rich-brown-dark);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Header Actions (CTA + Mobile Hamburger) */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* Mobile Drawer Toggle */
+.menu-toggle {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-metal-silver);
+  cursor: pointer;
+  padding: 0;
+  gap: 5px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+@media (min-width: 992px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Mobile & Tablet Header alignment (Căn thẳng hàng chuẩn xác nút Báo Giá & Hamburger) */
+@media (max-width: 991px) {
+  .header-inner {
+    height: 64px;
+    gap: 12px;
+  }
+
+  .header-actions {
+    gap: 8px;
+    align-items: center;
+  }
+
+  .header-actions .btn {
+    height: 38px;
+    padding: 0 14px;
+    font-size: 13px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(180, 122, 30, 0.25);
+  }
+
+  .header-actions .btn svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .menu-toggle {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+  }
+
+  .brand-logo svg,
+  .brand-logo-img {
+    height: 38px;
+    width: auto;
+  }
+
+  .brand-name {
+    font-size: 1.18rem;
+  }
+
+  .brand-slogan {
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .header-inner {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .brand-logo {
+    gap: 8px;
+  }
+
+  .brand-logo svg,
+  .brand-logo-img {
+    height: 34px;
+    width: auto;
+  }
+
+  .brand-name {
+    font-size: 1.05rem;
+  }
+
+  .brand-slogan {
+    font-size: 0.6rem;
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .header-actions .btn {
+    height: 36px;
+    padding: 0 10px;
+    font-size: 12px;
+    gap: 4px;
+  }
+
+  .header-actions .btn svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .menu-toggle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .menu-toggle .bar {
+    width: 18px;
+  }
+}
+
+.menu-toggle .bar {
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-rich-brown-dark);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-normal);
+}
+
+.menu-toggle[aria-expanded="true"] .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 82%;
+  max-width: 380px;
+  height: 100vh;
+  background-color: var(--color-tone-cream);
+  box-shadow: -10px 0 30px rgba(42, 25, 5, 0.25);
+  z-index: var(--z-modal);
+  display: flex;
+  flex-direction: column;
+  transition: right var(--transition-smooth);
+  overflow-y: auto;
+  padding: var(--space-24);
+  border-left: 2px solid var(--color-primary-gold);
+}
+
+.mobile-nav-drawer.open {
+  right: 0;
+}
+
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(42, 25, 5, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: calc(var(--z-modal) - 1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-normal), visibility var(--transition-normal);
+}
+
+.mobile-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-24);
+  padding-bottom: var(--space-16);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mobile-drawer-close {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background-color: var(--color-metal-silver);
+  color: var(--color-rich-brown-dark);
+  cursor: pointer;
+  border: 1px solid var(--color-border);
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  margin-bottom: var(--space-32);
+}
+
+.mobile-nav-link {
+  display: block;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-main);
+  padding: var(--space-12) var(--space-16);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  background-color: var(--color-tone-beige);
+  color: var(--color-rich-brown-dark);
+}
+
+/* ==========================================================================
+   FOOTER CHÍNH (NÂU ĐẬM NAME CARD QUÝ PHÁI & ĐƯỜNG CHỈ VÀNG KIM LOẠI)
+   ========================================================================== */
+
+.site-footer {
+  background: linear-gradient(180deg, #3A2307 0%, #2A1905 60%, #1A0F03 100%);
+  color: #D8DFE8;
+  padding-top: var(--space-64);
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid var(--color-primary-gold);
+}
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 10% 20%, rgba(223, 172, 85, 0.08) 0%, transparent 40%),
+                    radial-gradient(circle at 90% 80%, rgba(180, 122, 30, 0.12) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-40);
+  margin-bottom: var(--space-48);
+  position: relative;
+  z-index: 1;
+}
+
+.footer-grid-reference {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 640px) {
+  .footer-grid-reference {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-grid-reference {
+    grid-template-columns: 1.45fr 0.85fr 1.35fr 1.2fr;
+    gap: 28px;
+  }
+}
+
+.footer-heading {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  color: #FFFFFF;
+  font-weight: 800;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--color-primary-gold);
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links-list li a {
+  color: #CBD5E1;
+  font-size: 13.5px;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  display: inline-block;
+}
+
+.footer-links-list li a:hover {
+  color: #DFAC55;
+  transform: translateX(4px);
+}
+
+@media (min-width: 640px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
+  }
+}
+
+.footer-col h3 {
+  color: #FFFFFF;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-20);
+  position: relative;
+  padding-bottom: var(--space-12);
+}
+
+.footer-col h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--color-primary-gold);
+  border-radius: var(--radius-full);
+}
+
+.footer-about p {
+  color: #C5CDD7;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-loose);
+  margin-bottom: var(--space-16);
+}
+
+.footer-tax {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(223, 172, 85, 0.3);
+  padding: 6px 12px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  color: #F8FAFC;
+  margin-bottom: var(--space-16);
+}
+
+.footer-tax strong {
+  color: var(--color-primary-gold-shimmer);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.footer-links li a {
+  color: #B5BFCE;
+  font-size: var(--font-size-xs);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  transition: all var(--transition-fast);
+}
+
+.footer-links li a::before {
+  content: '›';
+  font-size: 16px;
+  color: var(--color-primary-gold-shimmer);
+}
+
+.footer-links li a:hover {
+  color: #FFFFFF;
+  transform: translateX(4px);
+}
+
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-12);
+  font-size: var(--font-size-xs);
+  color: #B5BFCE;
+  line-height: 1.5;
+}
+
+.footer-contact-item svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-primary-gold-shimmer);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.footer-contact-item a {
+  color: #F8FAFC;
+  font-weight: var(--font-weight-medium);
+}
+
+.footer-contact-item a:hover {
+  color: var(--color-primary-gold-shimmer);
+}
+
+.footer-map-card {
+  margin-top: var(--space-16);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(223, 172, 85, 0.3);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.footer-map-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 12px;
+  color: #E2E8F0;
+  transition: background var(--transition-fast);
+}
+
+.footer-map-link:hover {
+  background: var(--color-primary-gold);
+  color: #FFFFFF;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(223, 172, 85, 0.25);
+  padding: 24px 0 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-copyright-text {
+  margin: 0;
+  color: #E2E8F0;
+  font-size: 14.5px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  text-align: center;
+  font-family: var(--font-family-sans);
+}
+
+.footer-copyright-text strong,
+.footer-copyright-text .sota-author {
+  color: #FFFFFF;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-copyright-text .sota-author:hover {
+  color: #DFAC55;
+}

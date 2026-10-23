@@ -1,0 +1,137 @@
+<!-- ==========================================================================
+     MODAL XEM CHI TIẾT SẢN PHẨM (<div id="product-modal">)
+     Hiển thị chi tiết 5 tiêu chí: Ảnh Thực Tế, Định nghĩa, Thông số, Tính năng, Ứng dụng
+     ========================================================================== -->
+<div id="product-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <div class="modal-header-info">
+        <div class="modal-badge-row">
+          <span id="modal-code" class="modal-code-badge">#01</span>
+          <span id="modal-premium" class="badge-premium" style="display: none;">Cao Cấp</span>
+          <span id="modal-origin" class="badge-origin-pill">TRCN: Thổ Nhĩ Kỳ / China</span>
+        </div>
+        <h2 id="modal-title" class="modal-title">Tên Sản Phẩm</h2>
+        <div id="modal-subtitle" class="modal-subtitle">Quy cách tiêu chuẩn</div>
+      </div>
+      <button type="button" class="modal-close" aria-label="Đóng cửa sổ chi tiết">&times;</button>
+    </div>
+
+    <div class="modal-body">
+      <div class="modal-grid">
+        <!-- Cột Trái: Ảnh Sản Phẩm & CTA -->
+        <div class="modal-col-left">
+          <div id="modal-media-box" class="modal-media-box">
+            <!-- Render Real Image or Placeholder -->
+          </div>
+
+          <div class="modal-action-box">
+            <button type="button" id="modal-quote-btn" class="btn btn-primary btn-modal-cta">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Yêu Cầu Báo Giá Sản Phẩm Này</span>
+            </button>
+
+            <a href="tel:0981679267" class="btn btn-outline-brown btn-modal-call">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path>
+              </svg>
+              <span>Tư Vấn Nhanh: 0981 679 267</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Cột Phải: Thông Số & Nội Dung Chi Tiết -->
+        <div class="modal-col-right">
+          <!-- 1. Bảng Thông Số Kỹ Thuật Chi Tiết -->
+          <div class="modal-section">
+            <h3 class="modal-section-title">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
+              Thông Số Kỹ Thuật Đầy Đủ
+            </h3>
+            <div class="modal-specs-table" id="modal-specs-table">
+              <!-- Render Specs Key-Value -->
+            </div>
+          </div>
+
+          <!-- 2. Định Nghĩa & Cấu Tạo -->
+          <div class="modal-section">
+            <h3 class="modal-section-title">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+              Định Nghĩa Sản Phẩm
+            </h3>
+            <p id="modal-definition" class="modal-desc"></p>
+          </div>
+
+          <!-- 3. Tính Năng Vượt Trội -->
+          <div class="modal-section">
+            <h3 class="modal-section-title">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+              Tính Năng Vượt Trội
+            </h3>
+            <ul id="modal-features" class="modal-feature-list"></ul>
+          </div>
+
+          <!-- 4. Ứng Dụng Thực Tế -->
+          <div class="modal-section">
+            <h3 class="modal-section-title">
+              <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"></path></svg>
+              Ứng Dụng Thực Tế Theo Ngành
+            </h3>
+            <p id="modal-application" class="modal-desc"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================================================
+     MODAL THÔNG BÁO "ĐĂNG KÝ THÀNH CÔNG" (<div id="success-modal">)
+     Popup thông báo xác nhận gửi yêu cầu báo giá thành công
+     ========================================================================== -->
+<div id="success-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="success-modal-title">
+  <div class="modal-dialog" style="max-width: 500px; text-align: center; padding: 36px 28px; border-radius: 20px; border: 2px solid #DFAC55; background: #FFFFFF; box-shadow: 0 25px 60px rgba(42, 25, 5, 0.35); position: relative;">
+    
+    <!-- Nút đóng góc phải trên -->
+    <button type="button" id="success-modal-close-x" class="modal-close" aria-label="Đóng thông báo" style="position: absolute; top: 16px; right: 18px; width: 36px; height: 36px; border-radius: 50%; border: none; background: #F1F5F9; color: #64748B; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease;">
+      &times;
+    </button>
+
+    <!-- Icon Dấu Tích Xanh Lá & Vòng Ánh Kim Sang Trọng -->
+    <div style="width: 76px; height: 76px; margin: 0 auto 20px; border-radius: 50%; background: linear-gradient(135deg, rgba(34, 197, 94, 0.12) 0%, rgba(223, 172, 85, 0.18) 100%); border: 2.5px solid #22C55E; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 24px rgba(34, 197, 94, 0.3);">
+      <svg width="40" height="40" fill="none" stroke="#16A34A" stroke-width="2.6" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+      </svg>
+    </div>
+
+    <!-- Tiêu Đề Modal -->
+    <h3 id="success-modal-title" style="font-family: var(--font-heading); font-size: 23px; font-weight: 800; color: #2A1905; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.04em;">
+      ĐĂNG KÝ THÀNH CÔNG!
+    </h3>
+
+    <!-- Nội dung thông báo -->
+    <p style="font-size: 14px; color: #475569; line-height: 1.6; margin-bottom: 20px;">
+      Cảm ơn quý khách <strong id="success-client-name" style="color: #2A1905; font-weight: 700;"></strong> đã gửi yêu cầu báo giá vật liệu chịu nhiệt. Đội ngũ kỹ thuật <strong>Vina Khang</strong> đã tiếp nhận và sẽ liên hệ tư vấn trong vòng <strong>15 phút</strong>!
+    </p>
+
+    <!-- Hộp tóm tắt thông tin gửi -->
+    <div style="background: #FAF8F5; border: 1px dashed rgba(180, 122, 30, 0.4); border-radius: 12px; padding: 14px 18px; text-align: left; margin-bottom: 24px; font-size: 13px; color: #64748B;">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+        <span>Số điện thoại / Zalo:</span>
+        <strong id="success-client-phone" style="color: #0F172A; font-weight: 700;"></strong>
+      </div>
+      <div style="display: flex; justify-content: space-between;">
+        <span>Email nhận báo giá:</span>
+        <strong id="success-client-email" style="color: #0F172A; font-weight: 700;"></strong>
+      </div>
+    </div>
+
+    <!-- Nút Xác Nhận / Đóng Modal -->
+    <button type="button" id="close-success-modal" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 13px 24px; font-size: 14.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; border-radius: 10px; background: linear-gradient(135deg, #B47A1E 0%, #8D5B10 100%); color: #FFFFFF; border: none; cursor: pointer; box-shadow: 0 4px 16px rgba(180, 122, 30, 0.4); transition: all 0.2s ease;">
+      Xác Nhận & Đóng
+    </button>
+
+  </div>
+</div>

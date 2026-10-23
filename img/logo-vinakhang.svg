@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%" role="img" aria-label="Logo Công ty TNHH Thương Mại Vina Khang">
+  <!-- Biểu tượng chữ K màu vàng nâu kết hợp mái nhà cyan & 4 ô cửa sổ navy -->
+  <g id="VinaKhangLogoMark">
+    <!-- Thân chữ K màu vàng nâu đậm đà -->
+    <path d="M130,310 L130,195 L175,100 L220,185 L220,185 L300,105 L360,105 L230,225 L350,310 L290,310 L200,245 L175,270 L175,310 Z" fill="#B47A1E"/>
+    
+    <!-- Mái nhà viền Cyan / Ngọc bích sắc sảo -->
+    <path d="M145,310 L203,225 L275,310 L260,310 L203,243 L160,310 Z" fill="#00A3A6"/>
+    
+    <!-- 4 Ô cửa sổ vuông màu xanh tím navy (2x2) -->
+    <rect x="188" y="276" width="12" height="12" rx="1.5" fill="#1B1B6D"/>
+    <rect x="206" y="276" width="12" height="12" rx="1.5" fill="#1B1B6D"/>
+    <rect x="188" y="294" width="12" height="12" rx="1.5" fill="#1B1B6D"/>
+    <rect x="206" y="294" width="12" height="12" rx="1.5" fill="#1B1B6D"/>
+  </g>
+
+  <!-- Chữ 'Vina Khang' màu xanh tím navy -->
+  <text x="250" y="415" text-anchor="middle" font-family="'Montserrat', -apple-system, sans-serif" font-size="52" font-weight="800" fill="#1B1B6D" letter-spacing="-0.5px">Vina Khang</text>
+</svg>

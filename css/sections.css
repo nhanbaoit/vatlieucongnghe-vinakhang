@@ -1,0 +1,1133 @@
+/* ==========================================================================
+   SECTIONS STYLING - BẢNG MÀU PHONG THỦY MỆNH KIM & NAME CARD VINA KHANG
+   ========================================================================== */
+
+/* Tiêu đề chung cho các Section */
+.section-header {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto var(--space-48);
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-rich-brown);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background-color: var(--color-tone-beige);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-12);
+  border: 1px solid rgba(180, 122, 30, 0.25);
+}
+
+.section-title {
+  font-size: var(--font-size-3xl);
+  color: var(--color-text-title);
+  margin-bottom: var(--space-16);
+  position: relative;
+}
+
+.section-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-normal);
+}
+
+/* ==========================================================================
+   1. HERO CAROUSEL (NÂU ĐẬM HOÀNG KIM, ÁNH BẠC & VÀNG HỔ PHÁCH)
+   ========================================================================== */
+
+.section-hero {
+  position: relative;
+  background-color: #2A1905;
+  color: #FFFFFF;
+  overflow: hidden;
+}
+
+.hero-swiper {
+  width: 100%;
+  height: 600px;
+}
+
+@media (min-width: 768px) {
+  .hero-swiper {
+    height: 680px;
+  }
+}
+
+.hero-slide {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  padding: var(--space-64) 0;
+}
+
+.hero-slide-overlay {
+  position: absolute;
+  inset: 0;
+  /* Gradient sang trọng Mệnh Kim: Nâu đậm hoàng kim -> Xám thép kim loại -> Ánh vàng đồng */
+  background: linear-gradient(90deg, rgba(42, 25, 5, 0.96) 0%, rgba(55, 65, 81, 0.85) 60%, rgba(180, 122, 30, 0.35) 100%);
+  z-index: 1;
+}
+
+.hero-slide-content {
+  position: relative;
+  z-index: 2;
+  max-width: 740px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  background: rgba(223, 172, 85, 0.18);
+  border: 1px solid var(--color-primary-gold-shimmer);
+  color: #FFF2D1;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-20);
+  backdrop-filter: blur(4px);
+}
+
+.hero-title {
+  color: #FFFFFF;
+  font-size: 2.25rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin-bottom: var(--space-20);
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: var(--font-size-hero);
+  }
+}
+
+.hero-desc {
+  color: #E2E8F0;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-loose);
+  margin-bottom: var(--space-32);
+}
+
+.hero-btn-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-16);
+}
+
+.hero-swiper-btn {
+  width: 38px;
+  height: 38px;
+  background: rgba(20, 12, 5, 0.45);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(223, 172, 85, 0.5);
+  border-radius: var(--radius-full);
+  color: #FFFFFF;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.hero-swiper-btn:after {
+  font-size: 15px !important;
+  font-weight: 800;
+}
+
+.hero-swiper-btn:hover {
+  background: var(--color-primary-gold);
+  border-color: var(--color-primary-gold);
+  color: #FFFFFF;
+  transform: scale(1.08);
+  box-shadow: 0 0 14px rgba(223, 172, 85, 0.6);
+}
+
+.hero-btn-prev {
+  left: 20px !important;
+}
+
+.hero-btn-next {
+  right: 20px !important;
+}
+
+@media (max-width: 767px) {
+  .hero-swiper-btn {
+    width: 32px;
+    height: 32px;
+  }
+  .hero-swiper-btn:after {
+    font-size: 12px !important;
+  }
+  .hero-btn-prev {
+    left: 10px !important;
+  }
+  .hero-btn-next {
+    right: 10px !important;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  width: 28px !important;
+  border-radius: var(--radius-full) !important;
+  background: var(--color-primary-gold-shimmer) !important;
+  opacity: 1 !important;
+}
+
+/* ==========================================================================
+   2. GIỚI THIỆU (NỀN VÀNG KEM / BE NHẠT THANH LỊCH)
+   ========================================================================== */
+
+.section-about {
+  padding: var(--space-80) 0;
+  background-color: var(--color-tone-beige-light);
+  position: relative;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-48);
+  align-items: center;
+  margin-bottom: var(--space-48);
+}
+
+@media (min-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr 1.15fr;
+  }
+}
+
+.about-image-card {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(42, 25, 5, 0.1);
+  border: 4px solid #FFFFFF;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  min-height: 380px;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.about-floating-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -10px;
+  background: linear-gradient(135deg, #3F2608 0%, #2A1905 100%);
+  color: #FFFFFF;
+  padding: var(--space-16) var(--space-24);
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--color-primary-gold-shimmer);
+  box-shadow: 0 12px 30px rgba(42, 25, 5, 0.25);
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  z-index: 2;
+}
+
+.floating-badge-number {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-primary-gold-shimmer);
+  line-height: 1;
+}
+
+.floating-badge-text {
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+/* 3 Tiêu Chí Uy Tín (Chia 3 cột cân đối) */
+.about-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.about-highlights-grid .highlight-item {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  padding: 14px 16px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  transition: all var(--transition-fast);
+}
+
+.about-highlights-grid .highlight-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(180, 122, 30, 0.12);
+  border-color: rgba(223, 172, 85, 0.6);
+}
+
+.about-highlights-grid .highlight-item .highlight-num {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.about-highlights-grid .highlight-item .highlight-text {
+  font-size: 12px;
+  color: #475569;
+  line-height: 1.35;
+}
+
+.about-highlights-grid .highlight-item .highlight-text strong {
+  display: block;
+  color: #2A1905;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .about-highlights-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .about-highlights-grid .highlight-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px 6px;
+    gap: 6px;
+  }
+  .about-highlights-grid .highlight-item .highlight-num {
+    font-size: 18px;
+  }
+  .about-highlights-grid .highlight-item .highlight-text {
+    font-size: 10.5px;
+    line-height: 1.3;
+  }
+}
+
+/* ==========================================================================
+   NAMECARD 3D FLIP SHOWCASE (DANH THIẾP TƯƠNG TÁC 2 MẶT QUÉT QR ZALO)
+   Hiệu ứng đổ bóng 3D chân thực, biến thiên linh hoạt khi xoay qua xoay lại
+   ========================================================================== */
+
+.namecard-showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.namecard-flipper-wrap {
+  width: 100%;
+  perspective: 1400px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.namecard-flipper {
+  --card-rot-y: 0deg;
+  --card-lift-y: 0px;
+  width: 100%;
+  aspect-ratio: 1.68 / 1;
+  position: relative;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform: rotateY(var(--card-rot-y, 0deg)) translateY(var(--card-lift-y, 0px));
+  transition: transform 0.75s cubic-bezier(0.25, 1, 0.35, 1);
+  cursor: pointer;
+  border-radius: 16px;
+  outline: none;
+  will-change: transform;
+}
+
+.namecard-flipper:hover {
+  --card-lift-y: -4px;
+}
+
+.namecard-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 3.5px solid #FFFFFF;
+  box-shadow: 0 20px 42px -10px rgba(42, 25, 5, 0.35), 0 8px 18px -4px rgba(0, 0, 0, 0.18), inset 0 0 0 1px rgba(180, 122, 30, 0.2);
+  background-color: #FFFFFF;
+  transition: box-shadow 0.3s ease;
+}
+
+.namecard-flipper:hover .namecard-face {
+  border-color: #FFFDF5;
+  box-shadow: 0 24px 50px -10px rgba(42, 25, 5, 0.38),
+              0 0 24px rgba(223, 172, 85, 0.45),
+              inset 0 0 0 1.5px rgba(223, 172, 85, 0.65);
+}
+
+.namecard-front {
+  transform: rotateY(0deg) translateZ(1px);
+  z-index: 2;
+}
+
+.namecard-back {
+  transform: rotateY(180deg) translateZ(1px);
+  z-index: 1;
+}
+
+.namecard-flipper:not(.is-flipped) .namecard-front {
+  pointer-events: auto;
+}
+
+.namecard-flipper:not(.is-flipped) .namecard-back {
+  pointer-events: none;
+}
+
+.namecard-flipper.is-flipped .namecard-front {
+  pointer-events: none;
+  z-index: 1;
+}
+
+.namecard-flipper.is-flipped .namecard-back {
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.namecard-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hiệu ứng ánh kim hoàng kim (Metallic Gold Shimmer) khi trỏ chuột vào danh thiếp */
+.namecard-shimmer,
+.namecard-glare {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 12%,
+    rgba(255, 230, 160, 0.08) 25%,
+    rgba(255, 215, 110, 0.4) 38%,
+    rgba(255, 255, 240, 0.95) 48%,
+    rgba(255, 230, 130, 0.9) 52%,
+    rgba(212, 160, 60, 0.45) 62%,
+    rgba(180, 122, 30, 0.15) 72%,
+    transparent 85%
+  );
+  opacity: 0;
+  transform: translateX(-150%) skewX(-22deg);
+  pointer-events: none;
+  z-index: 3;
+  border-radius: 13px;
+  mix-blend-mode: overlay;
+  transition: transform 0.85s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.35s ease;
+}
+
+/* Khi trỏ chuột (hover): luồng ánh kim vàng óng quét mượt qua bề mặt */
+.namecard-flipper:hover .namecard-shimmer,
+.namecard-flipper:hover .namecard-glare {
+  opacity: 1;
+  transform: translateX(150%) skewX(-22deg);
+}
+
+/* Khi bấm lật (is-animating), vệt ánh kim cũng quét qua sang trọng */
+.namecard-flipper.is-animating .namecard-shimmer,
+.namecard-flipper.is-animating .namecard-glare {
+  animation: goldShimmerSweep 0.75s ease forwards;
+}
+
+@keyframes goldShimmerSweep {
+  0% {
+    opacity: 0;
+    transform: translateX(-150%) skewX(-22deg);
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(150%) skewX(-22deg);
+  }
+}
+
+/* Đổ bóng sàn 3D chân thực (Ground Ambient Shadow) */
+.namecard-ground-shadow {
+  width: 86%;
+  height: 24px;
+  margin-top: -10px;
+  background: radial-gradient(ellipse at center, rgba(35, 20, 5, 0.5) 0%, rgba(42, 25, 5, 0.25) 45%, rgba(0, 0, 0, 0) 74%);
+  border-radius: 50%;
+  filter: blur(10px);
+  pointer-events: none;
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+  opacity: 0.85;
+}
+
+.namecard-flipper-wrap:hover .namecard-ground-shadow {
+  transform: translateY(6px) scale(0.92);
+  opacity: 0.65;
+  filter: blur(13px);
+}
+
+/* Keyframe đổ bóng sàn chuyển động theo góc lật 3D */
+@keyframes shadowFlipAnim {
+  0% {
+    transform: scaleX(1) scaleY(1);
+    opacity: 0.85;
+    filter: blur(10px);
+  }
+  45% {
+    /* Khi thẻ danh thiếp đứng nghiêng 90 độ, bóng co hẹp và mờ rộng hơn */
+    transform: scaleX(0.24) scaleY(1.35) translateY(14px);
+    opacity: 0.4;
+    filter: blur(16px);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+    opacity: 0.85;
+    filter: blur(10px);
+  }
+}
+
+.namecard-ground-shadow.shadow-flip-anim {
+  animation: shadowFlipAnim 0.75s cubic-bezier(0.25, 1, 0.35, 1) forwards;
+}
+
+/* Tooltip chỉ xuất hiện khi trỏ chuột vào danh thiếp */
+.namecard-tooltip {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translate(-50%, 8px);
+  background: rgba(30, 21, 10, 0.92);
+  color: #FFF2D1;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(8px);
+  white-space: nowrap;
+  pointer-events: none;
+  border: 1px solid rgba(223, 172, 85, 0.5);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s ease, transform 0.28s ease, visibility 0.28s ease;
+  z-index: 5;
+}
+
+.namecard-tooltip svg {
+  color: #DFAC55;
+  flex-shrink: 0;
+}
+
+/* Mũi tên tooltip nhỏ bên dưới */
+.namecard-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px 5px 0 5px;
+  border-style: solid;
+  border-color: rgba(30, 21, 10, 0.92) transparent transparent transparent;
+}
+
+/* Khi trỏ chuột (hover) hoặc focus vào Card thì Tooltip hiện lên mượt mà */
+.namecard-flipper:hover .namecard-tooltip,
+.namecard-flipper:focus-visible .namecard-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+
+.namecard-caption {
+  font-size: 12px;
+  color: #64748B;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.zalo-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #0284C7;
+  display: inline-block;
+  animation: pulse-dot 1.5s infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(2, 132, 199, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(2, 132, 199, 0); }
+}
+
+.vision-mission-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-20);
+  margin-bottom: var(--space-40);
+}
+
+@media (min-width: 768px) {
+  .vision-mission-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.vision-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-xl);
+  padding: var(--space-24);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.vision-card:hover {
+  border-color: var(--color-primary-gold);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.vision-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-tone-beige);
+  color: var(--color-rich-brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-16);
+}
+
+.vision-icon-wrap svg {
+  width: 24px;
+  height: 24px;
+}
+
+.vision-card h3 {
+  font-size: var(--font-size-md);
+  margin-bottom: var(--space-8);
+  color: var(--color-text-title);
+}
+
+.vision-card p {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.core-values-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-16);
+}
+
+@media (min-width: 576px) {
+  .core-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .core-values-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.core-value-card {
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border);
+  padding: var(--space-20);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  transition: all var(--transition-fast);
+}
+
+.core-value-card:hover {
+  border-color: var(--color-primary-gold);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.core-value-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background-color: rgba(180, 122, 30, 0.12);
+  color: var(--color-rich-brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.core-value-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* ==========================================================================
+   3. LỢI THẾ CẠNH TRANH (NỀN XÁM BẠC KIM LOẠI - MỆNH KIM)
+   ========================================================================== */
+
+.section-advantages {
+  padding: var(--space-80) 0;
+  background-color: var(--color-metal-silver);
+  border-top: 1px solid var(--color-metal-silver-border);
+  border-bottom: 1px solid var(--color-metal-silver-border);
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-24);
+}
+
+@media (min-width: 640px) {
+  .advantages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .advantages-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.advantage-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-xl);
+  padding: var(--space-24);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-normal);
+  text-align: left;
+}
+
+.advantage-card:hover {
+  border-color: var(--color-primary-gold);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.advantage-number {
+  font-family: var(--font-family-mono);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-primary-gold-shimmer);
+  line-height: 1;
+  margin-bottom: var(--space-12);
+}
+
+.advantage-title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-title);
+  margin-bottom: var(--space-8);
+}
+
+.advantage-desc {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==========================================================================
+   4. SẢN PHẨM CHỊU NHIỆT CÔNG NGHIỆP (NỀN TRẮNG TINH KHIẾT)
+   ========================================================================== */
+
+.section-products {
+  padding: var(--space-80) 0;
+  background-color: var(--color-metal-white);
+}
+
+/* ==========================================================================
+   5. ỨNG DỤNG CỦA SẢN PHẨM (NỀN KEM NHẠT)
+   ========================================================================== */
+
+.section-applications {
+  padding: var(--space-80) 0;
+  background-color: var(--color-tone-cream);
+}
+
+.applications-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-24);
+}
+
+@media (min-width: 640px) {
+  .applications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .applications-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.app-box {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.app-box:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-primary-gold);
+}
+
+.app-media {
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(135deg, #3F2608 0%, #2A1905 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.app-content {
+  padding: var(--space-20);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.app-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-rich-brown);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.app-title {
+  font-size: var(--font-size-md);
+  color: var(--color-text-title);
+  margin-bottom: var(--space-8);
+}
+
+.app-desc {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-12);
+  flex-grow: 1;
+}
+
+.app-featured-list {
+  font-size: 12px;
+  color: var(--color-text-main);
+  background-color: var(--color-tone-beige);
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  margin: 0;
+}
+
+/* ==========================================================================
+   6. TUYỂN DỤNG
+   ========================================================================== */
+
+.section-career {
+  padding: var(--space-80) 0;
+  background-color: var(--color-tone-beige-light);
+}
+
+.career-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .career-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+.career-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  height: 100%;
+}
+
+.career-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary-gold);
+  box-shadow: 0 14px 30px rgba(42, 25, 5, 0.08);
+}
+
+.career-info h3 {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-title);
+  margin-bottom: 6px;
+}
+
+.career-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-8);
+}
+
+.career-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ==========================================================================
+   7. TIN TỨC & THỊ TRƯỜNG (NỀN XÁM BẠC KIM LOẠI)
+   ========================================================================== */
+
+.section-news {
+  padding: var(--space-80) 0;
+  background-color: var(--color-metal-silver);
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-32);
+}
+
+@media (min-width: 768px) {
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .news-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.news-card {
+  background-color: #FFFFFF;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+}
+
+.news-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-primary-gold);
+}
+
+.news-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.news-category-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background-color: var(--color-rich-brown-dark);
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(223, 172, 85, 0.4);
+}
+
+.news-body {
+  padding: var(--space-20);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.news-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  font-size: 12px;
+  color: var(--color-text-light);
+  margin-bottom: var(--space-12);
+}
+
+.news-title {
+  font-size: 17px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-title);
+  line-height: 1.4;
+  margin-bottom: var(--space-12);
+}
+
+.news-excerpt {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-16);
+  flex-grow: 1;
+}
+
+.news-link {
+  font-size: 13px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-rich-brown);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.news-link:hover {
+  color: var(--color-primary-gold);
+}
+
+/* ==========================================================================
+   8. LIÊN HỆ & CTA BANNER (NÂU ĐẬM HOÀNG KIM & CHỈ ÁNH BẠC VÀNG)
+   ========================================================================== */
+
+.section-cta {
+  padding: var(--space-80) 0;
+  background: linear-gradient(135deg, #3A2307 0%, #2A1905 50%, #1A0F03 100%);
+  color: #FFFFFF;
+  position: relative;
+  border-top: 3px solid var(--color-primary-gold);
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-40);
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .cta-grid {
+    grid-template-columns: 1fr 1.15fr;
+  }
+}
+
+.cta-content h2 {
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-16);
+}
+
+.cta-perks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.cta-perk-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  font-size: 14px;
+  color: #F8FAFC;
+}
+
+.cta-perk-item svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-primary-gold-shimmer);
+  flex-shrink: 0;
+}
+
+.cta-form-card {
+  background-color: #FFFFFF;
+  border-radius: var(--radius-xl);
+  padding: var(--space-32);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--color-border);
+}
+
+.cta-form-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-title);
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+.cta-form-subtitle {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-bottom: var(--space-20);
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+}
+
+@media (min-width: 600px) {
+  .form-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

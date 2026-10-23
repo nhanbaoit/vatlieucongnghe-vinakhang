@@ -1,0 +1,49 @@
+<!-- ==========================================================================
+     4. SẢN PHẨM CHỊU NHIỆT CÔNG NGHIỆP (<section id="products" class="section-products">)
+     Tone: Nền Trắng Tinh Khiết & Filter Tabs Nâu Đậm (Mệnh Kim)
+     ========================================================================== -->
+<section id="products" class="section-products">
+  <div class="container">
+    <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+      <div style="margin-bottom: 12px;">
+        <span class="section-tag" style="background-color: var(--color-tone-beige); color: var(--color-rich-brown); border: 1px solid rgba(180, 122, 30, 0.25);">Danh Mục Sản Phẩm</span>
+      </div>
+      <h2 class="section-title-reference" style="font-family: var(--font-heading); font-size: 26px; font-weight: 800; color: #2A1905; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; position: relative;">
+        SẢN PHẨM CHỊU NHIỆT CÔNG NGHIỆP
+        <span class="ref-double-line" style="display: block; width: 80px; height: 3px; background: #B47A1E; margin: 8px auto 0; border-radius: 2px;"></span>
+        <span class="ref-sub-line" style="display: block; width: 40px; height: 2px; background: #DFAC55; margin: 3px auto 0; border-radius: 2px;"></span>
+      </h2>
+      <p style="font-size: 13.5px; color: #64748B; margin-top: 10px;">
+        Chia theo từng nhóm sản phẩm chuyên dụng — cung cấp đầy đủ định nghĩa, thông số kỹ thuật, tính năng, ứng dụng và hình ảnh thực tế.
+      </p>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="tab-list" role="tablist" aria-label="Bộ lọc nhóm sản phẩm chịu nhiệt">
+      <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-filter="all">Tất Cả</button>
+      <button type="button" class="tab-btn" role="tab" aria-selected="false" data-filter="tape">Băng Keo</button>
+      <button type="button" class="tab-btn" role="tab" aria-selected="false" data-filter="fabric">Vải Chịu Nhiệt</button>
+      <button type="button" class="tab-btn" role="tab" aria-selected="false" data-filter="conveyor">Băng Tải</button>
+      <button type="button" class="tab-btn" role="tab" aria-selected="false" data-filter="belt">Dây Đai</button>
+      <button type="button" class="tab-btn" role="tab" aria-selected="false" data-filter="filter">Lọc Bụi</button>
+    </div>
+
+    <div id="product-grid-container" class="product-grid" aria-live="polite">
+      <!-- Rendered dynamically by product-filter.js -->
+    </div>
+
+    <!-- Nút Tải Thêm Sản Phẩm (Hiển thị ban đầu 6 sản phẩm, bấm để mở rộng) -->
+    <div id="product-load-more-wrap" class="product-load-more-wrap" style="display: none;">
+      <button type="button" id="load-more-products-btn" class="btn-load-more" aria-expanded="false">
+        <span class="load-more-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </span>
+        <span class="load-more-text">Xem Thêm Sản Phẩm Khác</span>
+        <span class="load-more-count">(+3)</span>
+      </button>
+    </div>
+
+  </div>
+</section>

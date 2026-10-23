@@ -1,0 +1,67 @@
+<!-- ==========================================================================
+     8. ĐĂNG KÝ BÁO GIÁ & TƯ VẤN (<section id="cta" class="section-cta">)
+     Liên kết trực tiếp với nút "Yêu Cầu Báo Giá" trên Header & kênh tiếp nhận
+     Tone: Nền Vàng Be Kem Nhạt, Card Trắng Viền Bạc & Nút Nâu Vàng Kim
+     ========================================================================== -->
+<section id="cta" class="section-cta" style="padding: 70px 0; background: #FAF8F5; border-top: 1px solid #E8E2D6; border-bottom: 1px solid #E8E2D6;">
+  <div class="container" style="max-width: 980px;">
+    
+    <!-- Tiêu Đề Trung Tâm Gạch Chân Đôi Chuẩn Màu Vàng Hoàng Kim Khớp Header -->
+    <div class="section-header" style="text-align: center; margin-bottom: 36px;">
+      <div style="margin-bottom: 12px;">
+        <span class="section-tag" style="background-color: var(--color-tone-beige); color: var(--color-rich-brown); border: 1px solid rgba(180, 122, 30, 0.25);">Tư Vấn & Báo Giá 24/7</span>
+      </div>
+      <h2 class="section-title-reference" style="font-family: var(--font-heading); font-size: 26px; font-weight: 800; color: #2A1905; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block; position: relative;">
+        ĐĂNG KÝ NHẬN TIN & BÁO GIÁ
+        <span class="ref-double-line" style="display: block; width: 80px; height: 3px; background: #B47A1E; margin: 8px auto 0; border-radius: 2px;"></span>
+        <span class="ref-sub-line" style="display: block; width: 40px; height: 2px; background: #DFAC55; margin: 3px auto 0; border-radius: 2px;"></span>
+      </h2>
+      <p style="font-size: 13.5px; color: #64748B; margin-top: 10px;">
+        Để lại thông tin nhu cầu vật liệu chịu nhiệt, đội ngũ kỹ thuật Vina Khang sẽ liên hệ phản hồi trong vòng 15 phút.
+      </p>
+    </div>
+
+    <!-- Form 2 Cột Chuẩn: Trái 4 ô input, Phải textarea + nút GỬI Báo Giá Nâu Vàng Kim -->
+    <div class="cta-form-wrapper" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 16px; padding: 32px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);">
+      <form id="quote-form" novalidate>
+        <div class="form-reference-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+          
+          <!-- Cột Trái: 4 ô xếp dọc -->
+          <div class="form-col-left" style="display: flex; flex-direction: column; gap: 14px;">
+            <div class="form-group" style="margin: 0;">
+              <input type="text" id="client-name" name="name" class="form-control" placeholder="Họ tên *" required style="background: #F8FAFC; border: 1px solid #CBD5E1; border-radius: 8px; padding: 12px 14px; font-size: 13.5px; width: 100%;">
+              <div class="form-feedback" aria-live="polite"></div>
+            </div>
+
+            <div class="form-group" style="margin: 0;">
+              <input type="tel" id="client-phone" name="phone" class="form-control" placeholder="Số điện thoại / Zalo *" required style="background: #F8FAFC; border: 1px solid #CBD5E1; border-radius: 8px; padding: 12px 14px; font-size: 13.5px; width: 100%;">
+              <div class="form-feedback" aria-live="polite"></div>
+            </div>
+
+            <div class="form-group" style="margin: 0;">
+              <input type="email" id="client-email" name="email" class="form-control" placeholder="Email nhận báo giá *" required style="background: #F8FAFC; border: 1px solid #CBD5E1; border-radius: 8px; padding: 12px 14px; font-size: 13.5px; width: 100%;">
+              <div class="form-feedback" aria-live="polite"></div>
+            </div>
+
+            <div class="form-group" style="margin: 0;">
+              <input type="text" id="client-address" name="address" class="form-control" placeholder="Địa chỉ / Tên nhà máy doanh nghiệp" style="background: #F8FAFC; border: 1px solid #CBD5E1; border-radius: 8px; padding: 12px 14px; font-size: 13.5px; width: 100%;">
+            </div>
+          </div>
+
+          <!-- Cột Phải: Textarea lớn + Nút GỬI Nâu Vàng Kim Đồng Bộ Header -->
+          <div class="form-col-right" style="display: flex; flex-direction: column; justify-content: space-between; gap: 14px;">
+            <div class="form-group" style="margin: 0; flex-grow: 1; display: flex; flex-direction: column;">
+              <textarea id="client-note" name="note" class="form-control" rows="5" placeholder="Nội dung yêu cầu báo giá (Ví dụ: Cần băng keo Nitto 903UL khổ 19mm, hoặc vải Teflon dày 0.13mm số lượng 50 mét...)" style="background: #F8FAFC; border: 1px solid #CBD5E1; border-radius: 8px; padding: 12px 14px; font-size: 13.5px; width: 100%; height: 100%; min-height: 120px; resize: none;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="background: linear-gradient(135deg, #B47A1E 0%, #8D5B10 100%); color: #FFFFFF; font-weight: 800; font-size: 15px; text-transform: uppercase; letter-spacing: 0.1em; padding: 14px; border-radius: 8px; border: none; cursor: pointer; box-shadow: 0 4px 14px rgba(180, 122, 30, 0.35); transition: all 0.2s ease;">
+              <span>GỬI YÊU CẦU BÁO GIÁ</span>
+            </button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
