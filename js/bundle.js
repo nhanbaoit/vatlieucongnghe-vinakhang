@@ -625,32 +625,6 @@ const PRODUCTS_DATA = [
       color: 'Đen chống tĩnh điện (Anti-static Black)'
     },
     moreSpecsCount: 2
-  },
-  {
-    id: 8,
-    code: '#08',
-    category: 'fabric',
-    origin: 'Carbon Chống Tĩnh Điện',
-    originType: 'cn',
-    isPremium: false,
-    title: 'Vải Chịu Nhiệt',
-    subtitle: 'Teflon Chống Tĩnh Điện (Anti-Static)',
-    definition: 'Vải Teflon màu đen đặc biệt được pha thêm các hạt carbon dẫn điện giúp phân tán điện tích tĩnh điện phát sinh do ma sát trong môi trường nhiệt khô.',
-    features: [
-      'Điện trở bề mặt được kiểm soát ngăn ngừa phóng tia lửa điện.',
-      'Bảo vệ an toàn tuyệt đối cho linh kiện điện tử nhạy cảm.',
-      'Khả năng chịu nhiệt và chống dính giữ nguyên phẩm chất cao của PTFE.'
-    ],
-    application: 'Sản xuất linh kiện bán dẫn, lắp ráp thiết bị điện tử, băng chuyền vận chuyển bụi bột dễ cháy nổ.',
-    specs: {
-      width: 'Khổ 1m, 1.25m',
-      length: '50m / cuộn',
-      thickness: '0.13mm, 0.18mm, 0.25mm',
-      temp: '-73 đến 260°C',
-      glue: 'Chống tĩnh điện bề mặt',
-      color: 'Đen nhám Carbon'
-    },
-    moreSpecsCount: 2
   }
 ];
 
