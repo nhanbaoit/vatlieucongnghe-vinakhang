@@ -520,9 +520,10 @@ const PRODUCTS_DATA = [
     origin: 'TRCN: Thổ Nhĩ Kỳ / China',
     originType: 'cn',
     isPremium: true,
-    title: 'Vải Chịu Nhiệt',
-    subtitle: 'Có Vân (Textured Weave)',
+    title: 'Vải Chịu Nhiệt Có Vân',
+    subtitle: 'PTFE Thoát Khí Chống Dính (Textured Weave)',
     image: './img/products/vai-chieu-nhiet-co-van.jpg',
+    gallery: ['./img/products/vai-chieu-nhiet-co-van.jpg'],
     definition: 'Vải sợi thủy tinh phủ PTFE có vân (Textured / Embossed PTFE Fabric) dệt từ cốt sợi thủy tinh chất lượng cao với cấu trúc vân ô dệt nổi rõ rệt trên bề mặt, tráng phủ lớp Fluoropolymer chống dính, giúp thoát khí và thoát ẩm tuyệt đối khi ép nhiệt.',
     features: [
       'Bề mặt dập nổi vân ô dệt sợi thủy tinh giúp thoát khí cực tốt, ngăn ngừa bọt khí phồng rộp khi ép nhiệt.',
@@ -545,13 +546,17 @@ const PRODUCTS_DATA = [
     id: 6,
     code: '#06',
     category: 'conveyor',
-    origin: 'Gia Công May Mép Đột Khuy',
+    categories: ['conveyor'],
+    origin: 'May Mép Đột Khuy Định Hướng',
     originType: 'cn',
     isPremium: true,
     title: 'Băng Tải Máy Ép Keo',
-    subtitle: 'PTFE Fusing Machine Belt',
+    subtitle: 'PTFE Fusing Machine Belt (May Mép Đột Khuy)',
     image: './img/products/bang-tai-may-ep-keo.jpg',
-    gallery: ['./img/products/bang-tai-may-ep-keo.jpg', './img/products/bang-tai-ep-lien-mach.jpg'],
+    gallery: [
+      './img/products/bang-tai-may-ep-keo.jpg',
+      './img/products/bang-tai-ep-lien-mach.jpg'
+    ],
     definition: 'Băng tải máy ép keo PTFE (PTFE Fusing Machine Belt) chuyên dùng trong ngành may mặc, dán ép mex cổ áo, nẹp áo và thân áo. Được sản xuất từ vải sợi thủy tinh cường lực ngâm phủ nhựa Teflon chống dính tuyệt đối, chịu nhiệt độ cao liên tục, hai mép được may viền vải gia cố và bấm khuy định hướng chống chạy lệch băng.',
     features: [
       'Gia công chuẩn xác theo chu vi, bản rộng và cấu hình mọi dòng máy ép keo (Hashima, Oshima, Meyer, Kannegiesser...).',
@@ -573,14 +578,18 @@ const PRODUCTS_DATA = [
   {
     id: 7,
     code: '#07',
-    category: 'belt',
-    origin: 'Đúc Liền Mạch Không Mối Nối',
+    category: 'conveyor',
+    categories: ['conveyor', 'belt'],
+    origin: 'Đúc Liền Mạch Không Mối Nối 360°',
     originType: 'cn',
     isPremium: true,
-    title: 'Dây Đai / Băng Tải Liền Mạch',
+    title: 'Băng Tải Ép Keo Liền Mạch',
     subtitle: 'Đúc Liền Vòng Không Mối Nối (Seamless)',
     image: './img/products/bang-tai-ep-lien-mach.jpg',
-    gallery: ['./img/products/bang-tai-ep-lien-mach.jpg', './img/products/bang-tai-may-ep-keo.jpg'],
+    gallery: [
+      './img/products/bang-tai-ep-lien-mach.jpg',
+      './img/products/bang-tai-may-ep-keo.jpg'
+    ],
     definition: 'Dây đai / băng tải máy ép keo đúc liền mạch (Seamless Belt) được dệt tròn liền khối hoàn toàn không có mối dán nối hay răng lược. Sau đó được phủ tráng lớp nhựa PTFE nguyên chất, giúp loại bỏ triệt để tình trạng cộm mép dán, hằn dấu lên nẹp áo may mặc hay đứt gãy khớp nối.',
     features: [
       'Công nghệ dệt liền khối 100% không mối nối, bề mặt phẳng tuyệt đối, tạo đường ép phẳng mịn hoàn hảo trên vải may cao cấp.',
@@ -918,7 +927,12 @@ function initProductFilter() {
   const renderList = (filter = 'all', scrollToTopOnCollapse = false) => {
     let filteredData = PRODUCTS_DATA;
     if (filter !== 'all') {
-      filteredData = PRODUCTS_DATA.filter(item => item.category === filter);
+      filteredData = PRODUCTS_DATA.filter(item => {
+        if (Array.isArray(item.categories)) {
+          return item.categories.includes(filter);
+        }
+        return item.category === filter;
+      });
     }
 
     const totalCount = filteredData.length;

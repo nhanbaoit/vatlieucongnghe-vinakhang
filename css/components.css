@@ -736,68 +736,78 @@
 
 /* Modal Media Box */
 .modal-media-box {
-  background-color: #F8FAFC;
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid #E2E8F0;
   height: 280px;
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  background: #F8FAFC;
 }
 
 .modal-real-img-wrap {
   width: 100%;
   height: 100%;
   position: relative;
+  overflow: hidden;
+  background: #1E150A;
 }
 
 .modal-real-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: opacity 0.25s ease;
 }
 
 .modal-img-badge {
   position: absolute;
-  bottom: 8px;
-  left: 8px;
-  right: 8px;
-  background: rgba(15, 23, 42, 0.82);
-  color: #F8FAFC;
+  top: 10px;
+  left: 10px;
+  background: rgba(30, 21, 10, 0.85);
+  color: #DFAC55;
   font-size: 11px;
-  padding: 4px 8px;
-  border-radius: 6px;
-  text-align: center;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(223, 172, 85, 0.4);
   backdrop-filter: blur(4px);
+  z-index: 2;
 }
 
 .modal-gallery-row {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  gap: 6px;
+  gap: 8px;
   z-index: 3;
+  background: rgba(15, 23, 42, 0.7);
+  padding: 5px 8px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .modal-thumb-btn {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 8px;
   overflow: hidden;
-  border: 2px solid rgba(255, 255, 255, 0.85);
+  border: 2px solid rgba(255, 255, 255, 0.6);
   cursor: pointer;
   padding: 0;
   background: #FFFFFF;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   transition: all var(--transition-fast);
 }
 
 .modal-thumb-btn.active, .modal-thumb-btn:hover {
-  border-color: var(--color-primary-gold);
-  transform: scale(1.08);
+  border-color: #DFAC55;
+  transform: scale(1.12);
+  box-shadow: 0 0 10px rgba(223, 172, 85, 0.7);
 }
 
 .modal-thumb-btn img {
