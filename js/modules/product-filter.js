@@ -9,12 +9,18 @@ export const PRODUCTS_DATA = [
     id: 1,
     code: '#01',
     category: 'tape',
-    origin: 'TRCN: Thổ Nhĩ Kỳ / China',
+    categories: ['tape'],
+    origin: 'Xẻ Cuộn Theo Yêu Cầu',
     originType: 'cn',
     isPremium: false,
-    title: 'Băng Keo Chịu Nhiệt',
-    subtitle: 'Tiêu Chuẩn',
+    title: 'Băng Keo Chịu Nhiệt Teflon',
+    subtitle: 'Tiêu Chuẩn (PTFE Adhesive Tape)',
     image: './img/products/bang-keo-chieu-nhiet-tieu-chuan.jpg',
+    gallery: [
+      './img/products/bang-keo-chieu-nhiet-tieu-chuan.jpg',
+      './img/products/bang-keo-nitto-denko.jpg',
+      './img/products/bang-keo-vai-chieu-nhiet-co-keo.jpg'
+    ],
     definition: 'Băng keo chịu nhiệt PTFE tiêu chuẩn là sự kết hợp giữa màng sợi thủy tinh ngâm tẩm polytetrafluoroethylene (Teflon) và lớp keo dán silicone chịu nhiệt cao chuyên dụng, bề mặt trơn láng chống bám dính tuyệt hảo và cách điện xuất sắc.',
     features: [
       'Bề mặt phủ PTFE chống dính tuyệt đối, dễ dàng lau sạch keo, nhựa nóng chảy bám dính.',
@@ -24,7 +30,7 @@ export const PRODUCTS_DATA = [
     ],
     application: 'Sử dụng rộng rãi trên thanh gia nhiệt máy đóng gói bao bì, máy hàn ép túi PE/PP màng co nhiệt, máy hút chân không thực phẩm, máy ép nhiệt ngành may và bọc bảo vệ con lăn sấy.',
     specs: {
-      width: '13mm, 19mm, 25mm, 30mm, 40mm, 50mm, 60mm... (Cắt theo yêu cầu)',
+      width: '13mm, 19mm, 25mm, 30mm, 40mm, 50mm, 60mm... (Cắt xẻ theo yêu cầu)',
       length: '10m / cuộn chuẩn',
       thickness: '0.13mm, 0.18mm',
       temp: '-73°C đến 260°C',
@@ -37,12 +43,18 @@ export const PRODUCTS_DATA = [
     id: 2,
     code: '#02',
     category: 'tape',
+    categories: ['tape'],
     origin: 'JP: Nhật Bản',
     originType: 'jp',
     isPremium: true,
     title: 'Băng Keo Chịu Nhiệt',
-    subtitle: 'Cao Cấp — Nitto Denko',
+    subtitle: 'Cao Cấp — Nitto Denko (Japan)',
     image: './img/products/bang-keo-nitto-denko.jpg',
+    gallery: [
+      './img/products/bang-keo-nitto-denko.jpg',
+      './img/products/bang-keo-chieu-nhiet-tieu-chuan.jpg',
+      './img/products/bang-keo-vai-chieu-nhiet-co-keo.jpg'
+    ],
     definition: 'Băng dính Teflon cao cấp chính hãng Nitto Denko (Nhật Bản) các model danh tiếng No.903UL / No.973UL-S đạt chuẩn quốc tế UL510 Flammability, chống cháy cấp H, độ bền kéo cơ học và độ bền nhiệt đỉnh cao.',
     features: [
       'Đạt chứng nhận chống cháy quốc tế khắt khe UL510 Flammability (Cách điện Cấp H).',
@@ -65,17 +77,23 @@ export const PRODUCTS_DATA = [
     id: 3,
     code: '#03',
     category: 'tape',
-    origin: 'TRCN: Thổ Nhĩ Kỳ / China',
+    categories: ['tape'],
+    origin: 'Khổ Rộng 1m / Cắt Tấm & Cuộn',
     originType: 'cn',
     isPremium: false,
-    title: 'Băng Keo Chịu Nhiệt',
-    subtitle: 'Vải Chịu Nhiệt Có Keo',
+    title: 'Băng Keo Vải Chịu Nhiệt',
+    subtitle: 'Vải Thủy Tinh Phủ PTFE Có Keo (Màng Bóc Vàng)',
     image: './img/products/bang-keo-vai-chieu-nhiet-co-keo.jpg',
-    definition: 'Vải sợi thủy tinh dệt gia cường phủ nhựa PTFE chịu nhiệt được tráng sẵn một mặt keo dính silicone (kèm lớp giấy bảo vệ màu vàng), tăng cường độ chịu lực kéo cơ học và chống rách thủng vượt bậc.',
+    gallery: [
+      './img/products/bang-keo-vai-chieu-nhiet-co-keo.jpg',
+      './img/products/bang-keo-chieu-nhiet-tieu-chuan.jpg',
+      './img/products/bang-keo-nitto-denko.jpg'
+    ],
+    definition: 'Vải sợi thủy tinh dệt gia cường phủ nhựa PTFE chịu nhiệt được tráng sẵn một mặt keo dính silicone (kèm lớp giấy màng bóc bảo vệ màu vàng), tăng cường độ chịu lực kéo cơ học và chống rách thủng vượt bậc.',
     features: [
       'Độ bền kéo đứt cực lớn nhờ lớp vải dệt thủy tinh cốt lõi gia cường chắc chắn.',
-      'Khả năng chống cắt và chống thủng cơ học vượt trội hơn hẳn so with màng film mỏng.',
-      'Khổ rộng tới 1m, dễ dàng dán phủ phẳng lên bàn ép hoặc trục lăn lớn.'
+      'Khả năng chống cắt và chống thủng cơ học vượt trội hơn hẳn so với màng film mỏng.',
+      'Khổ rộng tới 1m, có màng bóc bảo vệ tiện lợi, dễ dàng dán phủ phẳng lên bàn ép hoặc trục lăn lớn.'
     ],
     application: 'Lót máy ép nhiệt màng nhựa PVC, máy dán túi bóng ép nhiệt liên tục, bọc bảo vệ con lăn sấy in hoa vải, băng chuyền nhiệt độ cao.',
     specs: {
