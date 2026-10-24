@@ -211,9 +211,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   gap: 6px;
-  flex-wrap: wrap;
+  height: 26px; /* Cố định chiều cao dòng header để mọi khung ảnh bắt đầu ở cùng 1 tọa độ Y */
+  flex-wrap: nowrap;
 }
 
 .product-code-num {
@@ -221,13 +222,16 @@
   font-size: 13px;
   font-weight: 700;
   color: #94A3B8;
+  flex-shrink: 0;
 }
 
 .product-badge-group {
   display: flex;
   align-items: center;
   gap: 5px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  max-width: calc(100% - 36px);
 }
 
 .badge-premium {
@@ -235,10 +239,11 @@
   font-weight: 700;
   background-color: #2563EB;
   color: #FFFFFF;
-  padding: 2px 8px;
+  padding: 2px 7px;
   border-radius: 9999px;
   letter-spacing: 0.3px;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .badge-origin-pill {
@@ -247,24 +252,29 @@
   background-color: #F8FAFC;
   color: #64748B;
   border: 1px solid #E2E8F0;
-  padding: 2px 8px;
+  padding: 2px 7px;
   border-radius: 9999px;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 140px;
 }
 
 /* Card Media (Real photo or Placeholder) */
 .product-card-media {
   position: relative;
   width: 100%;
-  aspect-ratio: 1.25 / 1;
-  background-color: #F1F5F9;
-  border-radius: 14px;
+  aspect-ratio: 4 / 3;
+  height: 180px; /* Chiều cao cố định đồng nhất cho tất cả các thẻ sản phẩm */
+  background-color: #F8FAFC;
+  border-radius: 12px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 14px;
   cursor: pointer;
+  border: 1px solid #F1F5F9;
 }
 
 .product-img-real {
@@ -328,7 +338,11 @@
 }
 
 .product-title-group {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  min-height: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .product-main-title {
