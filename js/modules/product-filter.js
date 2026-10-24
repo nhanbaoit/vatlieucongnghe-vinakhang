@@ -173,7 +173,7 @@ export const PRODUCTS_DATA = [
     id: 6,
     code: '#06',
     category: 'conveyor',
-    categories: ['conveyor'],
+    categories: ['conveyor', 'belt'],
     origin: 'May Mép Bấm Khuy',
     originType: 'cn',
     isPremium: true,
@@ -197,41 +197,8 @@ export const PRODUCTS_DATA = [
       length: 'Chu vi gia công chính xác theo model máy khách hàng (1800mm, 2400mm, 3100mm...)',
       thickness: '0.25mm, 0.35mm, 0.45mm',
       temp: '-73°C đến 260°C (chịu đỉnh 300°C)',
-      glue: 'Không keo, phủ PTFE chống dính 2 mặt',
+      glue: 'May viền bấm khuy hoặc đúc liền mạch Seamless',
       color: 'Màu đen chống tĩnh điện / Màu nâu hổ phách'
-    },
-    moreSpecsCount: 2
-  },
-  {
-    id: 7,
-    code: '#07',
-    category: 'conveyor',
-    categories: ['conveyor', 'belt'],
-    origin: 'Đúc Liền Seamless',
-    originType: 'cn',
-    isPremium: true,
-    title: 'Băng Tải Ép Keo Liền Mạch',
-    subtitle: 'Đúc Liền Khối (Seamless Belt)',
-    image: './img/products/bang-tai-ep-lien-mach.jpg',
-    gallery: [
-      './img/products/bang-tai-ep-lien-mach.jpg',
-      './img/products/bang-tai-may-ep-keo.jpg'
-    ],
-    definition: 'Dây đai / băng tải máy ép keo đúc liền mạch (Seamless Belt) được dệt tròn liền khối hoàn toàn không có mối dán nối hay răng lược. Sau đó được phủ tráng lớp nhựa PTFE nguyên chất, giúp loại bỏ triệt để tình trạng cộm mép dán, hằn dấu lên nẹp áo may mặc hay đứt gãy khớp nối.',
-    features: [
-      'Công nghệ dệt liền khối 100% không mối nối, bề mặt phẳng tuyệt đối, tạo đường ép phẳng mịn hoàn hảo trên vải may cao cấp.',
-      'Tuổi thọ sử dụng cao gấp 3-4 lần so với băng tải dán đầu thông thường, không lo bong mối nối khi chạy liên tục.',
-      'Độ ổn định động học xuất sắc, vận hành êm ái trên trục xoay tốc độ cao không rung lắc.',
-      'Pha hạt carbon chống tĩnh điện, ngăn ngừa bám bụi xơ vải may mặc.'
-    ],
-    application: 'Máy ép keo liên tục ngành may mặc thời trang xuất khẩu, máy hàn miệng túi dán mép bao bì cao cấp tự động, máy ép nhiệt đóng gói kín.',
-    specs: {
-      width: 'Bản rộng từ 15mm đến 1200mm theo mọi quy cách máy',
-      length: 'Chu vi từ 750mm đến 3500mm (chuẩn máy may công nghiệp)',
-      thickness: '0.20mm, 0.25mm, 0.35mm',
-      temp: '-73°C đến 260°C',
-      glue: 'Đúc liền vòng tròn Seamless 360°',
-      color: 'Đen chống tĩnh điện (Anti-static Black)'
     },
     moreSpecsCount: 2
   }
