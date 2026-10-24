@@ -109,8 +109,8 @@ export const PRODUCTS_DATA = [
   {
     id: 4,
     code: '#04',
-    category: 'fabric',
-    categories: ['fabric'],
+    category: 'teflon-fabric',
+    categories: ['teflon-fabric', 'fabric'],
     origin: 'Nhập Khẩu Chính Hãng',
     originType: 'de',
     isPremium: true,
@@ -144,8 +144,8 @@ export const PRODUCTS_DATA = [
   {
     id: 5,
     code: '#05',
-    category: 'fabric',
-    categories: ['fabric'],
+    category: 'textured',
+    categories: ['textured', 'fabric'],
     origin: 'Thổ Nhĩ Kỳ / TQ',
     originType: 'cn',
     isPremium: true,
@@ -240,8 +240,8 @@ export const PRODUCTS_DATA = [
   {
     id: 8,
     code: '#08',
-    category: 'fabric',
-    categories: ['fabric'],
+    category: 'teflon-fabric',
+    categories: ['teflon-fabric', 'fabric'],
     origin: 'Cắt Tấm Theo Quy Cách',
     originType: 'de',
     isPremium: true,
