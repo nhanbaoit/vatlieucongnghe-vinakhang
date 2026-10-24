@@ -401,38 +401,105 @@ const PRODUCTS_DATA = [
     code: '#01',
     category: 'tape',
     categories: ['tape'],
-    origin: 'Nhập Khẩu & Gia Công',
+    origin: 'Xẻ Cuộn Theo Yêu Cầu',
     originType: 'cn',
-    isPremium: true,
-    title: 'Băng Keo Chịu Nhiệt',
-    subtitle: 'PTFE Adhesive Tape (Cuộn & Khổ 1m)',
+    isPremium: false,
+    title: 'Băng Keo Chịu Nhiệt Teflon',
+    subtitle: 'Tiêu Chuẩn (PTFE Adhesive Tape)',
     image: './img/products/bang-keo-chieu-nhiet-tieu-chuan.jpg',
     gallery: [
       './img/products/bang-keo-chieu-nhiet-tieu-chuan.jpg',
       './img/products/bang-keo-nitto-denko.jpg',
       './img/products/bang-keo-vai-chieu-nhiet-co-keo.jpg'
     ],
-    definition: 'Băng keo chịu nhiệt PTFE (Teflon) cao cấp kết hợp màng sợi thủy tinh ngâm tẩm nhựa Fluoropolymer và lớp keo dán silicone chịu nhiệt độ cao chuyên dụng. Bề mặt trơn láng chống bám dính tuyệt hảo, độ bền kéo đứt cơ học cao, khi bóc ra không để lại vết keo dơ trên bề mặt kim loại.',
+    definition: 'Băng keo chịu nhiệt PTFE tiêu chuẩn là sự kết hợp giữa màng sợi thủy tinh ngâm tẩm polytetrafluoroethylene (Teflon) và lớp keo dán silicone chịu nhiệt cao chuyên dụng, bề mặt trơn láng chống bám dính tuyệt hảo và cách điện xuất sắc.',
     features: [
-      'Bề mặt phủ PTFE chống dính 100%, dễ dàng lau sạch mọi chất keo, màng nhựa nóng chảy.',
-      'Lớp keo dán Silicone chịu nhiệt dẻo dai, bám dính siêu chắc trên kim loại, inox, cao su, nhựa.',
-      'Chịu nhiệt độ làm việc liên tục từ -73°C đến 260°C (nhiệt đỉnh lên tới 280°C - 300°C).',
-      'Đầy đủ quy cách: Cuộn xẻ bản nhỏ theo yêu cầu (13mm, 19mm, 25mm, 50mm...) và cuộn nguyên khổ rộng 1m có màng bóc bảo vệ.'
+      'Bề mặt phủ PTFE chống dính tuyệt đối, dễ dàng lau sạch keo, nhựa nóng chảy bám dính.',
+      'Lớp keo dán Silicone chịu nhiệt độ cao, bám dính siêu chắc, khi bóc ra không để lại vết keo dơ.',
+      'Hệ số ma sát cực thấp, chịu mài mòn cao trong các chu kỳ ép nhiệt dán túi liên tục.',
+      'Kháng tuyệt đối các loại dung môi hữu cơ, axit, kiềm và dầu mỡ công nghiệp.'
     ],
-    application: 'Thanh hàn nhiệt máy đóng gói bao bì, máy hút chân không thực phẩm, máy ép nhiệt may mặc, bọc bảo vệ con lăn sấy in hoa vải, cách điện bo mạch điện tử.',
+    application: 'Sử dụng rộng rãi trên thanh gia nhiệt máy đóng gói bao bì, máy hàn ép túi PE/PP màng co nhiệt, máy hút chân không thực phẩm, máy ép nhiệt ngành may và bọc bảo vệ con lăn sấy.',
     specs: {
-      width: 'Bản xẻ 13mm, 19mm, 25mm, 30mm, 50mm... & Khổ rộng 1m',
-      length: '10m / cuộn chuẩn hoặc cuộn khổ lớn 10m - 50m',
-      thickness: '0.08mm, 0.13mm, 0.18mm, 0.25mm',
-      temp: '-73°C đến 260°C (chịu đỉnh 280°C)',
-      glue: 'Keo Silicone chịu nhiệt chuyên dụng (có loại màng bóc vàng)',
-      color: 'Nâu hổ phách / Nâu cánh gián đậm'
+      width: '13mm, 19mm, 25mm, 30mm, 40mm, 50mm, 60mm... (Cắt xẻ theo yêu cầu)',
+      length: '10m / cuộn chuẩn',
+      thickness: '0.13mm, 0.18mm',
+      temp: '-73°C đến 260°C',
+      glue: 'Keo Silicone chịu nhiệt chuyên dụng (Pressure Sensitive)',
+      color: 'Nâu hổ phách tiêu chuẩn'
     },
     moreSpecsCount: 2
   },
   {
     id: 2,
     code: '#02',
+    category: 'tape',
+    categories: ['tape'],
+    origin: 'JP: Nhật Bản',
+    originType: 'jp',
+    isPremium: true,
+    title: 'Băng Keo Chịu Nhiệt',
+    subtitle: 'Cao Cấp — Nitto Denko (Japan)',
+    image: './img/products/bang-keo-nitto-denko.jpg',
+    gallery: [
+      './img/products/bang-keo-nitto-denko.jpg',
+      './img/products/bang-keo-chieu-nhiet-tieu-chuan.jpg',
+      './img/products/bang-keo-vai-chieu-nhiet-co-keo.jpg'
+    ],
+    definition: 'Băng dính Teflon cao cấp chính hãng Nitto Denko (Nhật Bản) các model danh tiếng No.903UL / No.973UL-S đạt chuẩn quốc tế UL510 Flammability, chống cháy cấp H, độ bền kéo cơ học và độ bền nhiệt đỉnh cao.',
+    features: [
+      'Đạt chứng nhận chống cháy quốc tế khắt khe UL510 Flammability (Cách điện Cấp H).',
+      'Lớp màng Teflon đồng nhất tuyệt đối không bọt khí, tuổi thọ gấp 3-4 lần băng thông thường.',
+      'Độ bền kéo đứt và chống xé rách cực cao khi vận hành liên tục 24/7 ở nhiệt độ lên tới 280°C.',
+      'Bảo vệ an toàn cho các bo mạch vi xử lý nhạy cảm và công đoạn hàn thiếc sóng nhiệt.'
+    ],
+    application: 'Dây chuyền sản xuất pin lithium, bo mạch điện tử, máy dán mép túi tự động tốc độ cao, máy ép nhiệt may mặc cao cấp xuất khẩu sang thị trường Nhật Bản và Châu Âu.',
+    specs: {
+      width: '13mm, 19mm, 25mm, 30mm, 40mm, 50mm, 60mm... (Cắt theo yêu cầu)',
+      length: '10m / cuộn chuẩn',
+      thickness: '0.08mm, 0.13mm (No.903UL / No.973UL-S)',
+      temp: '-73°C đến 280°C',
+      glue: 'Keo Silicone hữu cơ siêu dính Nitto Denko',
+      color: 'Nâu cánh gián đậm chuẩn Nitto Japan'
+    },
+    moreSpecsCount: 2
+  },
+  {
+    id: 3,
+    code: '#03',
+    category: 'tape',
+    categories: ['tape'],
+    origin: 'Khổ Rộng 1m / Cắt Tấm & Cuộn',
+    originType: 'cn',
+    isPremium: false,
+    title: 'Băng Keo Vải Chịu Nhiệt',
+    subtitle: 'Vải Thủy Tinh Phủ PTFE Có Keo (Màng Bóc Vàng)',
+    image: './img/products/bang-keo-vai-chieu-nhiet-co-keo.jpg',
+    gallery: [
+      './img/products/bang-keo-vai-chieu-nhiet-co-keo.jpg',
+      './img/products/bang-keo-chieu-nhiet-tieu-chuan.jpg',
+      './img/products/bang-keo-nitto-denko.jpg'
+    ],
+    definition: 'Vải sợi thủy tinh dệt gia cường phủ nhựa PTFE chịu nhiệt được tráng sẵn một mặt keo dính silicone (kèm lớp giấy màng bóc bảo vệ màu vàng), tăng cường độ chịu lực kéo cơ học và chống rách thủng vượt bậc.',
+    features: [
+      'Độ bền kéo đứt cực lớn nhờ lớp vải dệt thủy tinh cốt lõi gia cường chắc chắn.',
+      'Khả năng chống cắt và chống thủng cơ học vượt trội hơn hẳn so với màng film mỏng.',
+      'Khổ rộng tới 1m, có màng bóc bảo vệ tiện lợi, dễ dàng dán phủ phẳng lên bàn ép hoặc trục lăn lớn.'
+    ],
+    application: 'Lót máy ép nhiệt màng nhựa PVC, máy dán túi bóng ép nhiệt liên tục, bọc bảo vệ con lăn sấy in hoa vải, băng chuyền nhiệt độ cao.',
+    specs: {
+      width: '1m (Có thể cắt xẻ bản rộng theo kích thước yêu cầu)',
+      length: '10m - 50m / cuộn',
+      thickness: '0.13mm, 0.18mm',
+      temp: '-73 đến 260°C',
+      glue: 'Keo Silicone chịu nhiệt có màng bóc bảo vệ vàng',
+      color: 'Nâu sẫm vân sợi thủy tinh dệt'
+    },
+    moreSpecsCount: 1
+  },
+  {
+    id: 4,
+    code: '#04',
     category: 'fabric',
     categories: ['fabric'],
     origin: 'Nhập Khẩu Chính Hãng',
@@ -466,8 +533,8 @@ const PRODUCTS_DATA = [
     moreSpecsCount: 2
   },
   {
-    id: 3,
-    code: '#03',
+    id: 5,
+    code: '#05',
     category: 'fabric',
     categories: ['fabric'],
     origin: 'Thổ Nhĩ Kỳ / TQ',
@@ -496,35 +563,102 @@ const PRODUCTS_DATA = [
     moreSpecsCount: 2
   },
   {
-    id: 4,
-    code: '#04',
+    id: 6,
+    code: '#06',
     category: 'conveyor',
     categories: ['conveyor'],
-    origin: 'May Viền Khuy & Liền Mạch',
+    origin: 'May Mép Bấm Khuy',
     originType: 'cn',
     isPremium: true,
-    title: 'Băng Tải Ép Keo',
+    title: 'Băng Tải Máy Ép Keo',
     subtitle: 'PTFE Fusing Machine Belt',
     image: './img/products/bang-tai-may-ep-keo.jpg',
     gallery: [
       './img/products/bang-tai-may-ep-keo.jpg',
       './img/products/bang-tai-ep-lien-mach.jpg'
     ],
-    definition: 'Băng tải máy ép keo PTFE (PTFE Fusing Machine Belt) chuyên dùng trong ngành may mặc, dán ép mex cổ áo, nẹp áo và thân áo. Được sản xuất từ vải sợi thủy tinh cường lực ngâm phủ nhựa Teflon chống dính tuyệt đối, chịu nhiệt độ cao liên tục, gồm cả 2 dạng: may viền vải bấm khuy định hướng và đúc liền mạch Seamless 100% không mối nối.',
+    definition: 'Băng tải máy ép keo PTFE (PTFE Fusing Machine Belt) chuyên dùng trong ngành may mặc, dán ép mex cổ áo, nẹp áo và thân áo. Được sản xuất từ vải sợi thủy tinh cường lực ngâm phủ nhựa Teflon chống dính tuyệt đối, chịu nhiệt độ cao liên tục, hai mép được may viền vải gia cố và bấm khuy định hướng chống chạy lệch băng.',
     features: [
-      'Gia công chuẩn xác theo chu vi, bản rộng mọi dòng máy ép keo (Hashima, Oshima, Meyer, Kannegiesser...).',
+      'Gia công chuẩn xác theo chu vi, bản rộng và cấu hình mọi dòng máy ép keo (Hashima, Oshima, Meyer, Kannegiesser...).',
       'Bề mặt chống bám dính keo mex tuyệt hảo, vệ sinh lau chùi dễ dàng, không gây ố bẩn vải.',
-      'Cung cấp cả dạng may viền dập khuy mắt cáo và dạng đúc liền mạch Seamless không để lại vết hằn nẹp áo.',
+      'Mép băng may viền vải chịu nhiệt cao cấp, dập khuy mắt cáo dẫn hướng chính xác, chống tưa rách mép.',
       'Độ co giãn cực thấp, chịu lực kéo căng lớn và nhiệt độ làm việc liên tục lên đến 260°C.'
     ],
     application: 'Trang bị trên các dòng máy ép keo mex cổ áo, bo tay, nẹp áo sơ mi, áo vest, lò ép nhiệt phẳng và máy sấy ngành dệt may thời trang xuất khẩu.',
     specs: {
-      width: 'Khổ chuẩn: 300mm, 400mm, 450mm, 500mm, 600mm, 900mm, 1200mm... (Cắt theo máy)',
-      length: 'Chu vi gia công chính xác theo model máy (1800mm, 2400mm, 3100mm...)',
-      thickness: '0.20mm, 0.25mm, 0.35mm, 0.45mm',
+      width: 'Khổ chuẩn: 300mm, 400mm, 450mm, 500mm, 600mm, 900mm, 1000mm, 1200mm... (Cắt theo máy)',
+      length: 'Chu vi gia công chính xác theo model máy khách hàng (1800mm, 2400mm, 3100mm...)',
+      thickness: '0.25mm, 0.35mm, 0.45mm',
       temp: '-73°C đến 260°C (chịu đỉnh 300°C)',
-      glue: 'May viền bấm khuy hoặc đúc liền mạch Seamless',
+      glue: 'Không keo, phủ PTFE chống dính 2 mặt',
       color: 'Màu đen chống tĩnh điện / Màu nâu hổ phách'
+    },
+    moreSpecsCount: 2
+  },
+  {
+    id: 7,
+    code: '#07',
+    category: 'conveyor',
+    categories: ['conveyor', 'belt'],
+    origin: 'Đúc Liền Seamless',
+    originType: 'cn',
+    isPremium: true,
+    title: 'Băng Tải Ép Keo Liền Mạch',
+    subtitle: 'Đúc Liền Khối (Seamless Belt)',
+    image: './img/products/bang-tai-ep-lien-mach.jpg',
+    gallery: [
+      './img/products/bang-tai-ep-lien-mach.jpg',
+      './img/products/bang-tai-may-ep-keo.jpg'
+    ],
+    definition: 'Dây đai / băng tải máy ép keo đúc liền mạch (Seamless Belt) được dệt tròn liền khối hoàn toàn không có mối dán nối hay răng lược. Sau đó được phủ tráng lớp nhựa PTFE nguyên chất, giúp loại bỏ triệt để tình trạng cộm mép dán, hằn dấu lên nẹp áo may mặc hay đứt gãy khớp nối.',
+    features: [
+      'Công nghệ dệt liền khối 100% không mối nối, bề mặt phẳng tuyệt đối, tạo đường ép phẳng mịn hoàn hảo trên vải may cao cấp.',
+      'Tuổi thọ sử dụng cao gấp 3-4 lần so với băng tải dán đầu thông thường, không lo bong mối nối khi chạy liên tục.',
+      'Độ ổn định động học xuất sắc, vận hành êm ái trên trục xoay tốc độ cao không rung lắc.',
+      'Pha hạt carbon chống tĩnh điện, ngăn ngừa bám bụi xơ vải may mặc.'
+    ],
+    application: 'Máy ép keo liên tục ngành may mặc thời trang xuất khẩu, máy hàn miệng túi dán mép bao bì cao cấp tự động, máy ép nhiệt đóng gói kín.',
+    specs: {
+      width: 'Bản rộng từ 15mm đến 1200mm theo mọi quy cách máy',
+      length: 'Chu vi từ 750mm đến 3500mm (chuẩn máy may công nghiệp)',
+      thickness: '0.20mm, 0.25mm, 0.35mm',
+      temp: '-73°C đến 260°C',
+      glue: 'Đúc liền vòng tròn Seamless 360°',
+      color: 'Đen chống tĩnh điện (Anti-static Black)'
+    },
+    moreSpecsCount: 2
+  },
+  {
+    id: 8,
+    code: '#08',
+    category: 'fabric',
+    categories: ['fabric'],
+    origin: 'Cắt Tấm Theo Quy Cách',
+    originType: 'de',
+    isPremium: true,
+    title: 'Tấm Lót Chịu Nhiệt Teflon',
+    subtitle: 'Gia Công Cắt Tấm Theo Kích Thước',
+    image: './img/products/vai-teflon-chieu-nhiet-tam.jpg',
+    gallery: [
+      './img/products/vai-teflon-chieu-nhiet-tam.jpg',
+      './img/products/vai-teflon-chieu-nhiet-kho.jpg',
+      './img/products/vai-teflon-chieu-nhiet-trai.jpg'
+    ],
+    definition: 'Tấm lót chịu nhiệt Teflon (PTFE Sheet) được gia công cắt định hình chính xác theo quy cách mặt bàn ép nhiệt phẳng, khay nướng thực phẩm công nghiệp hoặc khuôn ép nhiệt composite, bề mặt phẳng mịn trơn láng chống dính 100%.',
+    features: [
+      'Gia công cắt xẻ định hình chuẩn xác theo kích thước bàn ép hoặc bản vẽ kỹ thuật.',
+      'Bề mặt phủ PTFE trơn bóng nhẵn mịn, hoàn toàn không bám dính keo hay dầu mỡ.',
+      'Chịu nhiệt độ làm việc liên tục từ -73°C đến 260°C (nhiệt đỉnh 300°C).',
+      'Dễ dàng vệ sinh lau chùi, tái sử dụng hàng nghìn chu kỳ ép nhiệt bền bỉ.'
+    ],
+    application: 'Lót bàn ép nhiệt phẳng may mặc chuyển nhiệt, tấm lót khuôn ép nhiệt composite và cao su, khay nướng bánh lò công nghiệp.',
+    specs: {
+      width: 'Cắt tấm theo kích thước yêu cầu (30x40, 40x60, 60x80cm...)',
+      length: 'Cắt tấm vuông, chữ nhật hoặc cuộn theo mét dài',
+      thickness: '0.08mm, 0.13mm, 0.18mm, 0.25mm, 0.35mm',
+      temp: '-73°C đến 260°C (chịu đỉnh 300°C)',
+      glue: 'Không keo (Trơn láng bóng 2 mặt)',
+      color: 'Nâu hổ phách / Nâu cánh gián sáng'
     },
     moreSpecsCount: 2
   }
