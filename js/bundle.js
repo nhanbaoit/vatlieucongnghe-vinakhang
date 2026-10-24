@@ -651,32 +651,6 @@ const PRODUCTS_DATA = [
       color: 'Đen nhám Carbon'
     },
     moreSpecsCount: 2
-  },
-  {
-    id: 9,
-    code: '#09',
-    category: 'filter',
-    origin: 'Lò Hơi & Luyện Kim',
-    originType: 'cn',
-    isPremium: false,
-    title: 'Túi Lọc Bụi PTFE',
-    subtitle: 'Chịu Nhiệt Độ Cao 260°C',
-    definition: 'Túi lọc bụi may từ nỉ không dệt 100% sợi PTFE kim cương, màng lọc xốp siêu vi xử lý khói thải lò đốt chứa khí axit và nhiệt độ cực cao.',
-    features: [
-      'Chịu nhiệt độ làm việc liên tục lên đến 260°C.',
-      'Kháng 100% tất cả các loại axit mạnh SOx, NOx và hơi ẩm bão hòa.',
-      'Bề mặt trơn láng rũ bụi dễ dàng, giảm chênh áp buồng lọc bụi.'
-    ],
-    application: 'Lò đốt rác công nghiệp y tế, nhà máy nhiệt điện than, luyện kim đúc cán thép, nhà máy sản xuất xi măng hóa chất.',
-    specs: {
-      width: 'Đường kính D130mm, D160mm... (May theo bản vẽ)',
-      length: 'Chiều dài 1m - 6m theo yêu cầu',
-      thickness: 'Định lượng 500g - 800g/m²',
-      temp: 'Chịu nhiệt liên tục 260°C',
-      glue: 'May viền chỉ PTFE chịu nhiệt',
-      color: 'Trắng đục hoặc xám ngà'
-    },
-    moreSpecsCount: 2
   }
 ];
 
